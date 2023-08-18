@@ -1,0 +1,14 @@
+name: Brakeman
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: ruby/setup-ruby@v1
+    - run: gem install brakeman --version 6
+    - run: brakeman
+      env:
+        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
