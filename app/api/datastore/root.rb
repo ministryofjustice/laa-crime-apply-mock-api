@@ -8,7 +8,7 @@ module Datastore
     #use SimpleJwtAuth::Middleware::Grape::Authorisation
 
     namespace :maat do
-      mount V1::MAAT::Applications
+      mount V1::Maat::Applications
     end
 
     mount V1::Healthcheck

@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::API
+=begin
   def message
     render json: { name: "Welcome to Mock API" }
   end
@@ -81,4 +82,5 @@ class ApplicationController < ActionController::API
       "office_code": "1K022G"
     }
   end
+=end
 end
