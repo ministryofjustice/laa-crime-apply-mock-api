@@ -1,7 +1,7 @@
 module Datastore
   module Entities
     module V1
-      module Maat
+      module MAAT
         class Application < BaseApplicationEntity
           unexpose :ioj_passport,
                    :interests_of_justice

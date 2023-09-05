@@ -1,6 +1,6 @@
 module Datastore
   module V1
-    module Maat
+    module MAAT
       class Applications < Base
         version 'v1', using: :path
 
@@ -14,7 +14,7 @@ module Datastore
           route_param :usn do
             get do
               print params[:usn]
-              Datastore::Entities::V1::Maat::Application.represent(
+              Datastore::Entities::V1::MAAT::Application.represent(
                 #CrimeApplication.find(reference: params[:usn])
               )
             end
