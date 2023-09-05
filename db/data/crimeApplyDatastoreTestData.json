@@ -1,0 +1,853 @@
+[
+  {
+    "id": "da297c78-1a58-419c-8b57-ca5dca2f045e",
+    "submitted_application": {
+      "id": "da297c78-1a58-419c-8b57-ca5dca2f045e",
+      "parent_id": null,
+      "reference": 10000133,
+      "created_at": "2023-07-17T08:21:27.848Z",
+      "date_stamp": "2023-07-17T08:22:35.997Z",
+      "case_details": {
+        "urn": "",
+        "offences": [
+          {
+            "name": "Drive a motor vehicle otherwise than in accordance with a licence",
+            "dates": [
+              {
+                "date_to": null,
+                "date_from": "2022-10-10"
+              }
+            ],
+            "offence_class": "H",
+            "slipstreamable": false
+          }
+        ],
+        "case_type": "summary_only",
+        "codefendants": [],
+        "hearing_date": "2023-12-10",
+        "appeal_maat_id": null,
+        "appeal_lodged_date": null,
+        "hearing_court_name": "Cardiff Crown Court",
+        "appeal_with_changes_details": null
+      },
+      "ioj_passport": [],
+      "submitted_at": "2023-07-17T08:23:15.334Z",
+      "client_details": {
+        "applicant": {
+          "nino": "JA293483A",
+          "last_name": "Walker",
+          "first_name": "DO NOT MODIFY Jane",
+          "other_names": "Crusher",
+          "home_address": null,
+          "date_of_birth": "1980-01-10",
+          "telephone_number": "",
+          "correspondence_address": null,
+          "correspondence_address_type": "providers_office_address"
+        }
+      },
+      "means_passport": [
+        "on_benefit_check"
+      ],
+      "schema_version": 1,
+      "application_type": "initial",
+      "provider_details": {
+        "office_code": "1K022G",
+        "provider_email": "acox@smw-law.co.uk",
+        "legal_rep_last_name": "Sandon",
+        "legal_rep_telephone": "07800888888",
+        "legal_rep_first_name": "John"
+      },
+      "interests_of_justice": [
+        {
+          "type": "loss_of_liberty",
+          "reason": "An example"
+        }
+      ]
+    },
+    "created_at": "2023-07-17T08:23:15.398Z",
+    "updated_at": "2023-07-17T09:03:07.674Z",
+    "status": "submitted",
+    "submitted_at": "2023-07-17T08:23:15.334Z",
+    "returned_at": null,
+    "searchable_text": "'10000133':6 'jane':4 'modifi':3 'walker':5",
+    "reviewed_at": null,
+    "review_status": "ready_for_assessment",
+    "reference": 10000133,
+    "applicant_first_name": "DO NOT MODIFY Jane",
+    "applicant_last_name": "Walker",
+    "offence_class": "H",
+    "office_code": "1K022G",
+    "return_details": null
+  },
+  {
+    "id": "0dcc7901-c4d6-4e0b-8ca2-f5ff5fb921b2",
+    "submitted_application": {
+      "id": "0dcc7901-c4d6-4e0b-8ca2-f5ff5fb921b2",
+      "parent_id": null,
+      "reference": 10000135,
+      "created_at": "2023-07-17T08:27:14.584Z",
+      "date_stamp": "2023-07-17T08:29:21.576Z",
+      "case_details": {
+        "urn": "12AB3456789",
+        "offences": [
+          {
+            "name": "Drive a motor vehicle otherwise than in accordance with a licence",
+            "dates": [
+              {
+                "date_to": null,
+                "date_from": "2023-01-10"
+              }
+            ],
+            "offence_class": "H",
+            "slipstreamable": false
+          }
+        ],
+        "case_type": "indictable",
+        "codefendants": [],
+        "hearing_date": "2023-12-10",
+        "appeal_maat_id": null,
+        "appeal_lodged_date": null,
+        "hearing_court_name": "Aberystwyth Magistrates' Court",
+        "appeal_with_changes_details": null
+      },
+      "ioj_passport": [],
+      "submitted_at": "2023-07-17T08:29:21.576Z",
+      "client_details": {
+        "applicant": {
+          "nino": "JA293483A",
+          "last_name": "Walker",
+          "first_name": "DO NOT MODIFY Jacob",
+          "other_names": "Beetlejuice",
+          "home_address": {
+            "city": "LONDON",
+            "country": "UNITED KINGDOM",
+            "postcode": "NW1 5AD",
+            "lookup_id": "17641969",
+            "address_line_one": "FLAT 21, DORSET HOUSE",
+            "address_line_two": "GLOUCESTER PLACE"
+          },
+          "date_of_birth": "1980-01-10",
+          "telephone_number": "",
+          "correspondence_address": null,
+          "correspondence_address_type": "home_address"
+        }
+      },
+      "means_passport": [
+        "on_benefit_check"
+      ],
+      "schema_version": 1,
+      "application_type": "initial",
+      "provider_details": {
+        "office_code": "1K022G",
+        "provider_email": "acox@smw-law.co.uk",
+        "legal_rep_last_name": "Sandon",
+        "legal_rep_telephone": "07800888888",
+        "legal_rep_first_name": "John"
+      },
+      "interests_of_justice": [
+        {
+          "type": "loss_of_liberty",
+          "reason": "An example"
+        },
+        {
+          "type": "suspended_sentence",
+          "reason": "An example"
+        }
+      ]
+    },
+    "created_at": "2023-07-17T08:29:21.631Z",
+    "updated_at": "2023-07-17T09:03:15.904Z",
+    "status": "submitted",
+    "submitted_at": "2023-07-17T08:29:21.576Z",
+    "returned_at": null,
+    "searchable_text": "'10000135':6 'jacob':4 'modifi':3 'walker':5",
+    "reviewed_at": null,
+    "review_status": "ready_for_assessment",
+    "reference": 10000135,
+    "applicant_first_name": "DO NOT MODIFY Jacob",
+    "applicant_last_name": "Walker",
+    "offence_class": "H",
+    "office_code": "1K022G",
+    "return_details": null
+  },
+  {
+    "id": "f2a30acf-58dd-4492-a065-ff639236234f",
+    "submitted_application": {
+      "id": "f2a30acf-58dd-4492-a065-ff639236234f",
+      "parent_id": null,
+      "reference": 10000136,
+      "created_at": "2023-07-17T08:31:46.885Z",
+      "date_stamp": "2023-07-17T08:33:35.732Z",
+      "case_details": {
+        "urn": "12AB3456789",
+        "offences": [
+          {
+            "name": "Armed robbery",
+            "dates": [
+              {
+                "date_to": null,
+                "date_from": "2022-10-10"
+              }
+            ],
+            "offence_class": "B",
+            "slipstreamable": true
+          }
+        ],
+        "case_type": "summary_only",
+        "codefendants": [],
+        "hearing_date": "2023-12-25",
+        "appeal_maat_id": null,
+        "appeal_lodged_date": null,
+        "hearing_court_name": "Berwick-upon-Tweed Magistrates' Court",
+        "appeal_with_changes_details": null
+      },
+      "ioj_passport": [
+        "on_offence"
+      ],
+      "submitted_at": "2023-07-17T08:34:46.311Z",
+      "client_details": {
+        "applicant": {
+          "nino": "JA293483A",
+          "last_name": "Walker",
+          "first_name": "DO NOT MODIFY James",
+          "other_names": "Don Corleone",
+          "home_address": {
+            "city": "LONDON",
+            "country": "UNITED KINGDOM",
+            "postcode": "N1 4ED",
+            "lookup_id": "15458595",
+            "address_line_one": "21",
+            "address_line_two": "NORTHCHURCH ROAD"
+          },
+          "date_of_birth": "1980-01-10",
+          "telephone_number": "07813323457",
+          "correspondence_address": null,
+          "correspondence_address_type": "home_address"
+        }
+      },
+      "means_passport": [
+        "on_benefit_check"
+      ],
+      "schema_version": 1,
+      "application_type": "initial",
+      "provider_details": {
+        "office_code": "1K022G",
+        "provider_email": "acox@smw-law.co.uk",
+        "legal_rep_last_name": "Sandon",
+        "legal_rep_telephone": "07800888888",
+        "legal_rep_first_name": "John"
+      },
+      "interests_of_justice": []
+    },
+    "created_at": "2023-07-17T08:34:46.375Z",
+    "updated_at": "2023-07-17T09:03:20.106Z",
+    "status": "submitted",
+    "submitted_at": "2023-07-17T08:34:46.311Z",
+    "returned_at": null,
+    "searchable_text": "'10000136':6 'jame':4 'modifi':3 'walker':5",
+    "reviewed_at": null,
+    "review_status": "ready_for_assessment",
+    "reference": 10000136,
+    "applicant_first_name": "DO NOT MODIFY James",
+    "applicant_last_name": "Walker",
+    "offence_class": "B",
+    "office_code": "1K022G",
+    "return_details": null
+  },
+  {
+    "id": "a094ee73-166c-4fde-a1c7-cb6ffb880166",
+    "submitted_application": {
+      "id": "a094ee73-166c-4fde-a1c7-cb6ffb880166",
+      "parent_id": null,
+      "reference": 10000141,
+      "created_at": "2023-07-17T08:51:25.837Z",
+      "date_stamp": "2023-07-17T08:53:52.201Z",
+      "case_details": {
+        "urn": "",
+        "offences": [
+          {
+            "name": "Armed robbery",
+            "dates": [
+              {
+                "date_to": null,
+                "date_from": "2022-01-10"
+              }
+            ],
+            "offence_class": "B",
+            "slipstreamable": true
+          }
+        ],
+        "case_type": "indictable",
+        "codefendants": [],
+        "hearing_date": "2023-08-25",
+        "appeal_maat_id": null,
+        "appeal_lodged_date": null,
+        "hearing_court_name": "Camberwell Green Magistrates' Court",
+        "appeal_with_changes_details": null
+      },
+      "ioj_passport": [
+        "on_age_under18",
+        "on_offence"
+      ],
+      "submitted_at": "2023-07-17T08:53:52.201Z",
+      "client_details": {
+        "applicant": {
+          "nino": null,
+          "last_name": "Walker",
+          "first_name": "DO NOT MODIFY Jordan",
+          "other_names": "Snoops",
+          "home_address": {
+            "city": "LONDON",
+            "country": "UNITED KINGDOM",
+            "postcode": "NW3 1AE",
+            "lookup_id": "17679531",
+            "address_line_one": "HIGH CLOSE",
+            "address_line_two": "HOLFORD ROAD"
+          },
+          "date_of_birth": "2008-12-10",
+          "telephone_number": "",
+          "correspondence_address": null,
+          "correspondence_address_type": "home_address"
+        }
+      },
+      "means_passport": [
+        "on_age_under18"
+      ],
+      "schema_version": 1,
+      "application_type": "initial",
+      "provider_details": {
+        "office_code": "1K022G",
+        "provider_email": "acox@smw-law.co.uk",
+        "legal_rep_last_name": "Sandon",
+        "legal_rep_telephone": "07800888888",
+        "legal_rep_first_name": "John"
+      },
+      "interests_of_justice": []
+    },
+    "created_at": "2023-07-17T08:53:52.254Z",
+    "updated_at": "2023-07-17T09:03:24.601Z",
+    "status": "submitted",
+    "submitted_at": "2023-07-17T08:53:52.201Z",
+    "returned_at": null,
+    "searchable_text": "'10000141':6 'jordan':4 'modifi':3 'walker':5",
+    "reviewed_at": null,
+    "review_status": "ready_for_assessment",
+    "reference": 10000141,
+    "applicant_first_name": "DO NOT MODIFY Jordan",
+    "applicant_last_name": "Walker",
+    "offence_class": "B",
+    "office_code": "1K022G",
+    "return_details": null
+  },
+  {
+    "id": "5b48ac95-1a0d-4ce1-a200-d89edbfca5ba",
+    "submitted_application": {
+      "id": "5b48ac95-1a0d-4ce1-a200-d89edbfca5ba",
+      "parent_id": "57f46f65-0ffd-41fe-bf1c-b2ba345d3b38",
+      "reference": 10000137,
+      "created_at": "2023-07-17T09:02:08.468Z",
+      "date_stamp": "2023-07-17T08:39:06.205Z",
+      "case_details": {
+        "urn": "",
+        "offences": [
+          {
+            "name": "Armed robbery",
+            "dates": [
+              {
+                "date_to": null,
+                "date_from": "2023-03-10"
+              }
+            ],
+            "offence_class": "B",
+            "slipstreamable": true
+          }
+        ],
+        "case_type": "summary_only",
+        "codefendants": [],
+        "hearing_date": "2023-12-10",
+        "appeal_maat_id": null,
+        "appeal_lodged_date": null,
+        "hearing_court_name": "Banbury Magistrates' Court",
+        "appeal_with_changes_details": null
+      },
+      "ioj_passport": [
+        "on_age_under18",
+        "on_offence"
+      ],
+      "submitted_at": "2023-07-17T09:02:28.288Z",
+      "client_details": {
+        "applicant": {
+          "nino": null,
+          "last_name": "Walker",
+          "first_name": "DO NOT MODIFY Jonathan",
+          "other_names": "Peabody",
+          "home_address": {
+            "city": "LONDON",
+            "country": "UNITED KINGDOM",
+            "postcode": "N1 4EE",
+            "lookup_id": "15458606",
+            "address_line_one": "39",
+            "address_line_two": "NORTHCHURCH ROAD"
+          },
+          "date_of_birth": "2013-02-21",
+          "telephone_number": "",
+          "correspondence_address": null,
+          "correspondence_address_type": "home_address"
+        }
+      },
+      "means_passport": [
+        "on_age_under18"
+      ],
+      "schema_version": 1,
+      "application_type": "initial",
+      "provider_details": {
+        "office_code": "1K022G",
+        "provider_email": "acox@smw-law.co.uk",
+        "legal_rep_last_name": "Sandon",
+        "legal_rep_telephone": "07800888888",
+        "legal_rep_first_name": "John"
+      },
+      "interests_of_justice": []
+    },
+    "created_at": "2023-07-17T09:02:28.340Z",
+    "updated_at": "2023-07-17T09:03:40.446Z",
+    "status": "submitted",
+    "submitted_at": "2023-07-17T09:02:28.288Z",
+    "returned_at": null,
+    "searchable_text": "'10000137':6 'jonathan':4 'modifi':3 'walker':5",
+    "reviewed_at": null,
+    "review_status": "ready_for_assessment",
+    "reference": 10000137,
+    "applicant_first_name": "DO NOT MODIFY Jonathan",
+    "applicant_last_name": "Walker",
+    "offence_class": "B",
+    "office_code": "1K022G",
+    "return_details": null
+  },
+  {
+    "id": "94ddf412-a0b1-4a5e-9682-9b8a7e3692d5",
+    "submitted_application": {
+      "id": "94ddf412-a0b1-4a5e-9682-9b8a7e3692d5",
+      "parent_id": null,
+      "reference": 10000143,
+      "created_at": "2023-07-17T08:54:25.384Z",
+      "date_stamp": "2023-07-17T08:58:17.172Z",
+      "case_details": {
+        "urn": "12AB3456789",
+        "offences": [
+          {
+            "name": "Armed robbery",
+            "dates": [
+              {
+                "date_to": null,
+                "date_from": "2022-09-09"
+              }
+            ],
+            "offence_class": "B",
+            "slipstreamable": true
+          }
+        ],
+        "case_type": "indictable",
+        "codefendants": [],
+        "hearing_date": "2023-12-10",
+        "appeal_maat_id": null,
+        "appeal_lodged_date": null,
+        "hearing_court_name": "Barkingside Magistrates' Court",
+        "appeal_with_changes_details": null
+      },
+      "ioj_passport": [
+        "on_offence"
+      ],
+      "submitted_at": "2023-07-17T08:58:17.172Z",
+      "client_details": {
+        "applicant": {
+          "nino": "JA293483A",
+          "last_name": "Walker",
+          "first_name": "DO NOT MODIFY Jimmy",
+          "other_names": "Scarface",
+          "home_address": {
+            "city": "LONDON",
+            "country": "UNITED KINGDOM",
+            "postcode": "NW5 1AD",
+            "lookup_id": "54337378",
+            "address_line_one": "FLAT 4, 19",
+            "address_line_two": "FORTESS ROAD"
+          },
+          "date_of_birth": "1980-01-10",
+          "telephone_number": "07585509223",
+          "correspondence_address": null,
+          "correspondence_address_type": "home_address"
+        }
+      },
+      "means_passport": [
+        "on_benefit_check"
+      ],
+      "schema_version": 1,
+      "application_type": "initial",
+      "provider_details": {
+        "office_code": "1K022G",
+        "provider_email": "acox@smw-law.co.uk",
+        "legal_rep_last_name": "Sandon",
+        "legal_rep_telephone": "07800888888",
+        "legal_rep_first_name": "John"
+      },
+      "interests_of_justice": []
+    },
+    "created_at": "2023-07-17T08:58:17.230Z",
+    "updated_at": "2023-07-17T09:03:28.342Z",
+    "status": "submitted",
+    "submitted_at": "2023-07-17T08:58:17.172Z",
+    "returned_at": null,
+    "searchable_text": "'10000143':6 'jimmi':4 'modifi':3 'walker':5",
+    "reviewed_at": null,
+    "review_status": "ready_for_assessment",
+    "reference": 10000143,
+    "applicant_first_name": "DO NOT MODIFY Jimmy",
+    "applicant_last_name": "Walker",
+    "offence_class": "B",
+    "office_code": "1K022G",
+    "return_details": null
+  },
+  {
+    "id": "3e2ba49a-0cd7-4b74-99e9-788a88e717fd",
+    "submitted_application": {
+      "id": "3e2ba49a-0cd7-4b74-99e9-788a88e717fd",
+      "parent_id": null,
+      "reference": 10000132,
+      "created_at": "2023-07-17T08:17:37.346Z",
+      "date_stamp": "2023-07-17T08:20:36.998Z",
+      "case_details": {
+        "urn": "",
+        "offences": [
+          {
+            "name": "Drive a motor vehicle otherwise than in accordance with a licence",
+            "dates": [
+              {
+                "date_to": null,
+                "date_from": "2023-01-10"
+              }
+            ],
+            "offence_class": "H",
+            "slipstreamable": false
+          }
+        ],
+        "case_type": "indictable",
+        "codefendants": [],
+        "hearing_date": "2023-12-10",
+        "appeal_maat_id": null,
+        "appeal_lodged_date": null,
+        "hearing_court_name": "Caernarfon Crown Court",
+        "appeal_with_changes_details": null
+      },
+      "ioj_passport": [],
+      "submitted_at": "2023-07-17T08:20:36.998Z",
+      "client_details": {
+        "applicant": {
+          "nino": "JA293483A",
+          "last_name": "Walker",
+          "first_name": "DO NOT MODIFY John",
+          "other_names": "Edelweiss",
+          "home_address": {
+            "city": "LONDON",
+            "country": "UNITED KINGDOM",
+            "postcode": "W2 1AD",
+            "lookup_id": "25762865",
+            "address_line_one": "2",
+            "address_line_two": "GILPIN CLOSE"
+          },
+          "date_of_birth": "1980-01-10",
+          "telephone_number": "07812345678",
+          "correspondence_address": null,
+          "correspondence_address_type": "home_address"
+        }
+      },
+      "means_passport": [
+        "on_benefit_check"
+      ],
+      "schema_version": 1,
+      "application_type": "initial",
+      "provider_details": {
+        "office_code": "1K022G",
+        "provider_email": "acox@smw-law.co.uk",
+        "legal_rep_last_name": "Sandon",
+        "legal_rep_telephone": "07800888888",
+        "legal_rep_first_name": "John"
+      },
+      "interests_of_justice": [
+        {
+          "type": "loss_of_liberty",
+          "reason": "An example"
+        }
+      ]
+    },
+    "created_at": "2023-07-17T08:20:37.068Z",
+    "updated_at": "2023-07-17T09:03:03.432Z",
+    "status": "submitted",
+    "submitted_at": "2023-07-17T08:20:36.998Z",
+    "returned_at": null,
+    "searchable_text": "'10000132':6 'john':4 'modifi':3 'walker':5",
+    "reviewed_at": null,
+    "review_status": "ready_for_assessment",
+    "reference": 10000132,
+    "applicant_first_name": "DO NOT MODIFY John",
+    "applicant_last_name": "Walker",
+    "offence_class": "H",
+    "office_code": "1K022G",
+    "return_details": null
+  },
+  {
+    "id": "49d91f73-50e0-472d-9e06-b487f922eb57",
+    "submitted_application": {
+      "id": "49d91f73-50e0-472d-9e06-b487f922eb57",
+      "parent_id": null,
+      "reference": 10000134,
+      "created_at": "2023-07-17T08:23:54.515Z",
+      "date_stamp": "2023-07-17T08:25:44.424Z",
+      "case_details": {
+        "urn": "12AB3456789",
+        "offences": [
+          {
+            "name": "Drive a motor vehicle otherwise than in accordance with a licence",
+            "dates": [
+              {
+                "date_to": null,
+                "date_from": "2023-03-10"
+              }
+            ],
+            "offence_class": "H",
+            "slipstreamable": false
+          }
+        ],
+        "case_type": "summary_only",
+        "codefendants": [],
+        "hearing_date": "2023-12-10",
+        "appeal_maat_id": null,
+        "appeal_lodged_date": null,
+        "hearing_court_name": "Cambridge Magistrates' Court",
+        "appeal_with_changes_details": null
+      },
+      "ioj_passport": [],
+      "submitted_at": "2023-07-17T08:26:31.027Z",
+      "client_details": {
+        "applicant": {
+          "nino": "JA293483A",
+          "last_name": "Walker",
+          "first_name": "DO NOT MODIFY Janet",
+          "other_names": "Summer Breeze",
+          "home_address": {
+            "city": "LONDON",
+            "country": "UNITED KINGDOM",
+            "postcode": "NW3 7AD",
+            "lookup_id": "17696479",
+            "address_line_one": "282",
+            "address_line_two": "FINCHLEY ROAD"
+          },
+          "date_of_birth": "1980-01-10",
+          "telephone_number": "",
+          "correspondence_address": {
+            "city": "LONDON",
+            "country": "UNITED KINGDOM",
+            "postcode": "E8 1AD",
+            "lookup_id": "7960402",
+            "address_line_one": "FLAT 1, 3",
+            "address_line_two": "NAVARINO ROAD"
+          },
+          "correspondence_address_type": "other_address"
+        }
+      },
+      "means_passport": [
+        "on_benefit_check"
+      ],
+      "schema_version": 1,
+      "application_type": "initial",
+      "provider_details": {
+        "office_code": "1K022G",
+        "provider_email": "acox@smw-law.co.uk",
+        "legal_rep_last_name": "Sandon",
+        "legal_rep_telephone": "07800888888",
+        "legal_rep_first_name": "John"
+      },
+      "interests_of_justice": [
+        {
+          "type": "loss_of_liberty",
+          "reason": "An example"
+        }
+      ]
+    },
+    "created_at": "2023-07-17T08:26:31.104Z",
+    "updated_at": "2023-07-17T09:03:11.970Z",
+    "status": "submitted",
+    "submitted_at": "2023-07-17T08:26:31.027Z",
+    "returned_at": null,
+    "searchable_text": "'10000134':6 'janet':4 'modifi':3 'walker':5",
+    "reviewed_at": null,
+    "review_status": "ready_for_assessment",
+    "reference": 10000134,
+    "applicant_first_name": "DO NOT MODIFY Janet",
+    "applicant_last_name": "Walker",
+    "offence_class": "H",
+    "office_code": "1K022G",
+    "return_details": null
+  },
+  {
+    "id": "a62996a5-96f5-407a-81d8-5fc75c1b5b80",
+    "submitted_application": {
+      "id": "a62996a5-96f5-407a-81d8-5fc75c1b5b80",
+      "parent_id": "e0d2727f-5d62-4680-9893-7087cba4ec74",
+      "reference": 10000140,
+      "created_at": "2023-07-17T09:01:03.998Z",
+      "date_stamp": "2023-07-17T08:49:41.124Z",
+      "case_details": {
+        "urn": "12AB3456789",
+        "offences": [
+          {
+            "name": "Drive a motor vehicle otherwise than in accordance with a licence",
+            "dates": [
+              {
+                "date_to": null,
+                "date_from": "2020-10-10"
+              }
+            ],
+            "offence_class": "H",
+            "slipstreamable": false
+          }
+        ],
+        "case_type": "summary_only",
+        "codefendants": [],
+        "hearing_date": "2023-08-25",
+        "appeal_maat_id": null,
+        "appeal_lodged_date": null,
+        "hearing_court_name": "Bolton Combined Court Centre",
+        "appeal_with_changes_details": null
+      },
+      "ioj_passport": [
+        "on_age_under18"
+      ],
+      "submitted_at": "2023-07-17T09:01:33.537Z",
+      "client_details": {
+        "applicant": {
+          "nino": null,
+          "last_name": "Walker",
+          "first_name": "DO NOT MODIFY Jackie",
+          "other_names": "Rambo",
+          "home_address": null,
+          "date_of_birth": "2009-12-10",
+          "telephone_number": "07823451185",
+          "correspondence_address": null,
+          "correspondence_address_type": "providers_office_address"
+        }
+      },
+      "means_passport": [
+        "on_age_under18"
+      ],
+      "schema_version": 1,
+      "application_type": "initial",
+      "provider_details": {
+        "office_code": "1K022G",
+        "provider_email": "acox@smw-law.co.uk",
+        "legal_rep_last_name": "Sandon",
+        "legal_rep_telephone": "07800888888",
+        "legal_rep_first_name": "John"
+      },
+      "interests_of_justice": []
+    },
+    "created_at": "2023-07-17T09:01:33.604Z",
+    "updated_at": "2023-07-17T09:03:32.731Z",
+    "status": "submitted",
+    "submitted_at": "2023-07-17T09:01:33.537Z",
+    "returned_at": null,
+    "searchable_text": "'10000140':6 'jacki':4 'modifi':3 'walker':5",
+    "reviewed_at": null,
+    "review_status": "ready_for_assessment",
+    "reference": 10000140,
+    "applicant_first_name": "DO NOT MODIFY Jackie",
+    "applicant_last_name": "Walker",
+    "offence_class": "H",
+    "office_code": "1K022G",
+    "return_details": null
+  },
+  {
+    "id": "6c5a9afb-f410-4f8b-a75e-7b4c07d46564",
+    "submitted_application": {
+      "id": "6c5a9afb-f410-4f8b-a75e-7b4c07d46564",
+      "parent_id": "d5122dc4-d0b2-4268-8134-7db105844379",
+      "reference": 10000139,
+      "created_at": "2023-07-17T09:01:37.527Z",
+      "date_stamp": "2023-07-17T09:02:04.259Z",
+      "case_details": {
+        "urn": "",
+        "offences": [
+          {
+            "name": "Drive a motor vehicle otherwise than in accordance with a licence",
+            "dates": [
+              {
+                "date_to": "2022-01-11",
+                "date_from": "2022-01-10"
+              }
+            ],
+            "offence_class": "H",
+            "slipstreamable": false
+          }
+        ],
+        "case_type": "indictable",
+        "codefendants": [],
+        "hearing_date": "2024-01-21",
+        "appeal_maat_id": null,
+        "appeal_lodged_date": null,
+        "hearing_court_name": "Blackpool Magistrates' Court",
+        "appeal_with_changes_details": null
+      },
+      "ioj_passport": [
+        "on_age_under18"
+      ],
+      "submitted_at": "2023-07-17T09:02:04.259Z",
+      "client_details": {
+        "applicant": {
+          "nino": null,
+          "last_name": "Walker",
+          "first_name": "DO NOT MODIFY Jennifer",
+          "other_names": "Ada Lovelace",
+          "home_address": null,
+          "date_of_birth": "2005-07-18",
+          "telephone_number": "",
+          "correspondence_address": {
+            "city": "LONDON",
+            "country": "UNITED KINGDOM",
+            "postcode": "N1 1RD",
+            "lookup_id": "15447925",
+            "address_line_one": "1",
+            "address_line_two": "HAMPTON COURT"
+          },
+          "correspondence_address_type": "other_address"
+        }
+      },
+      "means_passport": [
+        "on_age_under18"
+      ],
+      "schema_version": 1,
+      "application_type": "initial",
+      "provider_details": {
+        "office_code": "1K022G",
+        "provider_email": "acox@smw-law.co.uk",
+        "legal_rep_last_name": "Sandon",
+        "legal_rep_telephone": "07800888888",
+        "legal_rep_first_name": "John"
+      },
+      "interests_of_justice": []
+    },
+    "created_at": "2023-07-17T09:02:04.312Z",
+    "updated_at": "2023-07-17T09:03:36.759Z",
+    "status": "submitted",
+    "submitted_at": "2023-07-17T09:02:04.259Z",
+    "returned_at": null,
+    "searchable_text": "'10000139':6 'jennif':4 'modifi':3 'walker':5",
+    "reviewed_at": null,
+    "review_status": "ready_for_assessment",
+    "reference": 10000139,
+    "applicant_first_name": "DO NOT MODIFY Jennifer",
+    "applicant_last_name": "Walker",
+    "offence_class": "H",
+    "office_code": "1K022G",
+    "return_details": null
+  }
+]

@@ -27,6 +27,13 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
+gem 'grape', '~> 1.7.0'
+gem 'grape-entity', '~> 0.10.2'
+gem 'grape_logging'
+gem 'kaminari-activerecord'
+
+gem 'laa-criminal-legal-aid-schemas',
+    github: 'ministryofjustice/laa-criminal-legal-aid-schemas', tag: 'v1.0.0'
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
