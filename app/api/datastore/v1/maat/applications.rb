@@ -13,10 +13,25 @@ module Datastore
           end
           route_param :usn do
             get do
-              print params[:usn]
-              Datastore::Entities::V1::MAAT::Application.represent(
-                #CrimeApplication.find(reference: params[:usn])
+              path = 'db/data/crimeApplyDatastoreTestData.json'
+              data = File.read(path)
+              episodes = JSON.parse(data)
+              result = []
+              episodes.each do |hash|
+                result << hash["submitted_application"] if hash["reference"] == params[:usn] && hash["review_status"] == "ready_for_assessment"
+              end
+              p result
+
+              # the code below for return application from DB
+
+=begin
+             Datastore::Entities::V1::MAAT::Application.represent(
+                CrimeApplication.find_by!(
+                  reference: params[:usn],
+                  review_status: Types::ReviewApplicationStatus['ready_for_assessment']
+                )
               )
+=end
             end
           end
         end
