@@ -14,3 +14,8 @@
 # ActiveSupport::Inflector.inflections(:en) do |inflect|
 #   inflect.acronym "RESTful"
 # end
+
+ActiveSupport::Inflector.inflections do |inflect|
+  # Allow properties model to be pluralised
+  inflect.uncountable %w(properties)
+end

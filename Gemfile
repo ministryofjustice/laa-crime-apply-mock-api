@@ -42,6 +42,10 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
+# Used for validating a JSON schemas
+gem 'json-schema'
+#gem 'activerecord_json_validator', '~> 2.1.5'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 

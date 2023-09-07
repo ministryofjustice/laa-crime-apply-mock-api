@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  maat_application: one
+  id: MyString
+  schema_version: 1.5
+  reference: 1
+
+two:
+  maat_application: two
+  id: MyString
+  schema_version: 1.5
+  reference: 1
