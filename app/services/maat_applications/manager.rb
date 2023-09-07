@@ -48,6 +48,6 @@ class Manager
   def maat_application_params(params, permitted)
     # We're adding an additional field for maat_id so we can keep the default auto-incrementing id field
     permitted.push(:maat_id)
-    params.require(:maat_application).permit(permitted).merge(maat_id: params[:id])
+    params.permit(permitted).merge(maat_id: params[:id])
   end
 end

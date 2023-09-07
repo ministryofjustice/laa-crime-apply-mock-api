@@ -134,7 +134,7 @@ class ValidatorBuilder
 
     # Register any custom validation rules we have
     register_custom_validation
-
+    test = params
     # Get the data into hashes so we can validate
     submitted_provider_details = params.require(:provider_details).permit(permitted_fields[:provider_details]).to_h
     submitted_applicant_details = params.require(:client_details).require(:applicant).permit(permitted_fields[:applicant]).to_h
