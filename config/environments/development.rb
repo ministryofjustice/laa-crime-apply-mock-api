@@ -67,4 +67,12 @@ Rails.application.configure do
 
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
+
+  # Add the development host if set
+  config.hosts += [ENV["DEVELOPMENT_HOST"]]
+
+  # Allow connections from inside a docker container to this host machine
+  config.hosts += %w[host.docker.internal]
+
+  config.file_watcher = ActiveSupport::FileUpdateChecker
 end

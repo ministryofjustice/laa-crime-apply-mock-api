@@ -1,0 +1,66 @@
+# Simplify running the application inside a container locally.
+# Usage: `docker-compose up`
+#
+# Do not use docker-compose in production environments.
+#
+version: '3.4'
+
+x-aws-variables: &aws-variables
+  AWS_ENDPOINT_URL: http://localstack:4566
+  AWS_ACCESS_KEY_ID: test
+  AWS_SECRET_ACCESS_KEY: test
+  AWS_REGION: us-east-1
+  EVENTS_SNS_TOPIC_ARN: arn:aws:sns:us-east-1:000000000000:events-sns-topic-dev
+  S3_BUCKET_NAME: crime-apply-documents-dev
+
+services:
+  db:
+    image: postgres:15.2-alpine
+    environment:
+      POSTGRES_HOST_AUTH_METHOD: trust
+    ports:
+      - "5432:5432"
+
+  # Used to emulate AWS for local development
+  localstack:
+    image: localstack/localstack:latest
+    ports:
+      - "4566:4566"           # localstack gateway
+      - "4510-4559:4510-4559" # external services port range
+    environment:
+      AWS_ACCESS_KEY_ID: test
+      AWS_SECRET_ACCESS_KEY: test
+      AWS_DEFAULT_REGION: us-east-1 # only this region works for SNS in localstack
+      S3_SKIP_SIGNATURE_VALIDATION: 0
+      DOCKER_HOST: unix:///var/run/docker.sock
+      SERVICES: s3,sns
+    volumes:
+      - ./config/localstack/ready.sh:/etc/localstack/init/ready.d/ready.sh
+      - ./config/localstack/shutdown.sh:/etc/localstack/init/shutdown.d/shutdown.sh
+      - ./docker/localstack-volume:/var/lib/localstack
+      - /var/run/docker.sock:/var/run/docker.sock
+
+  web:
+    build: .
+    environment:
+      <<: *aws-variables
+      ENV_NAME: development
+      RACK_ENV: development
+      RAILS_ENV: development
+      PORT: 3003
+      SECRET_KEY_BASE: 6ac192ecbd4b8c4887d3ea1d2532b1f470f33ed56623d8236c52a5555fec36ac2d1fdd86d313bdf6c7f389eaccc79b66480aadca02afb8401c81b67a77f4b6b4
+      DATABASE_URL: postgresql://postgres@db/laa-crime-apply-mock-api
+      DATABASE_SSLMODE: disable
+      DISABLE_HTTPS: "1"
+      RAILS_SERVE_STATIC_FILES: "1"
+      ENABLE_PROMETHEUS_EXPORTER: "false" # can be enabled for quick tests
+      PROMETHEUS_EXPORTER_PORT: 9397
+      API_AUTH_SECRET_APPLY: foobar
+      API_AUTH_SECRET_REVIEW: foobar
+    ports:
+      - "3003:3003" # puma server (rails app)
+      - "9397:9397" # prometheus exporter `/metrics` endpoint
+    depends_on:
+      - db
+    volumes:
+      - ./:/usr/src/app

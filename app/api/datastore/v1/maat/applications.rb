@@ -7,6 +7,16 @@ module Datastore
         #route_setting :authorised_consumers, %w[maat-adapter-dev maat-adapter-uat]
 
         resource :applications do
+          desc 'Create an application.'
+          params do
+            requires :application, type: JSON, desc: 'Application JSON payload.'
+          end
+          post do
+            Operations::CreateApplication.new(
+              payload: params[:application]
+            ).call
+          end
+
           desc 'Return an application by USN.'
           params do
             requires :usn, type: Integer, desc: 'Application USN.'
