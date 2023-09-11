@@ -4,7 +4,7 @@ module Datastore
       class Applications < Base
         version 'v1', using: :path
 
-        #route_setting :authorised_consumers, %w[maat-adapter-dev maat-adapter-uat]
+        route_setting :authorised_consumers, %w[https://cognito-idp.eu-west-2.amazonaws.com/eu-west-2_6mJr60x9m]
 
         resource :applications do
           desc 'Return an application by USN.'

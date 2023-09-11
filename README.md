@@ -43,3 +43,13 @@ Bug reports and pull requests are welcome.
 4. Push the branch (`git push origin my-new-feature`)
 5. Make sure your changes are covered by tests, so that we don't break it unintentionally in the future.
 6. Create a new pull request.
+
+## API Authentication/Authorisation
+How to Authenticate/Authorise APIs:
+
+1. Edit and add to the verify_jwt.rb script an OAuth2 JWT bearer token obtained from Cognito as well as a Cognito server link to the public keys.
+2. Run the verify_jwt.io script to obtain the public key to verify JWT tokens.
+3. Save the public key as a public_key.pem in the config folder.
+4. Edit and add the public key string to the relevant .env file or wherever you want to store the public key string.
+5. Edit the simple_jwt_auth.rb script to add the relevant JWT issuer that we want to allow to access our APIs.
+6. Edit the relevant API route setting to allow the new authorised consumer (JWT issuer) of that API.
