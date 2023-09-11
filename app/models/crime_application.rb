@@ -1,12 +1,13 @@
 class CrimeApplication < ApplicationRecord
   include Redactable
 
-  attr_readonly :submitted_application, :submitted_at, :id
+  attr :submitted_application, :submitted_at
+  attr_readonly :id
   enum status: Types::ApplicationStatus.mapping
   enum review_status: Types::ReviewApplicationStatus.mapping
 
-  before_validation :shift_payload_attributes, on: :create
-  before_validation :set_overall_offence_class, on: :create
+  before_validation :shift_payload_attributes, on: [ :create, :update ]
+  before_validation :set_overall_offence_class, on: [ :create, :update ]
 
   private
 

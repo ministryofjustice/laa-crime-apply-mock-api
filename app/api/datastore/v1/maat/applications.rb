@@ -18,6 +18,26 @@ module Datastore
             ).call
           end
 
+          desc 'Update an application.'
+          params do
+
+            requires :application, type: JSON, desc: 'Application JSON payload.'
+          end
+          route_param :usn do
+            put do
+              if CrimeApplication.exists?(reference: params[:usn])
+                Operations::UpdateApplication.new(
+                  payload: params[:application]
+                ).call
+              else
+                # If an application doesn't exist with this USN, create a new one
+                Operations::CreateApplication.new(
+                  payload: params[:application]
+                ).call
+              end
+            end
+          end
+
           desc 'Return an application by USN.'
           params do
             requires :usn, type: Integer, desc: 'Application USN.'
