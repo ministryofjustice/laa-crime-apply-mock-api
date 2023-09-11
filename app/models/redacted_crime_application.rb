@@ -1,0 +1,2 @@
+class RedactedCrimeApplication < ApplicationRecord
+end

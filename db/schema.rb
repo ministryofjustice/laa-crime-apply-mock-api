@@ -10,11 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_09_07_142859) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_11_085338) do
   # These are extensions that must be enabled in order to support this database
+  enable_extension "citext"
   enable_extension "plpgsql"
 
-  create_table "crime_applications", force: :cascade do |t|
+  create_table "crime_applications", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.jsonb "submitted_application"
     t.string "status", default: "submitted", null: false
     t.datetime "submitted_at", precision: nil, default: -> { "CURRENT_TIMESTAMP" }
@@ -22,19 +23,33 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_07_142859) do
     t.datetime "reviewed_at", precision: nil
     t.string "review_status", default: "application_received", null: false
     t.virtual "reference", type: :integer, as: "((submitted_application ->> 'reference'::text))::integer", stored: true
+    t.virtual "applicant_first_name", type: :citext, as: "(submitted_application #>> '{client_details,applicant,first_name}'::text[])", stored: true
+    t.virtual "applicant_last_name", type: :citext, as: "(submitted_application #>> '{client_details,applicant,last_name}'::text[])", stored: true
     t.virtual "office_code", type: :string, as: "((submitted_application -> 'provider_details'::text) ->> 'office_code'::text)", stored: true
     t.virtual "searchable_text", type: :tsvector, as: "((to_tsvector('english'::regconfig, (submitted_application #>> '{client_details,applicant,first_name}'::text[])) || to_tsvector('english'::regconfig, (submitted_application #>> '{client_details,applicant,last_name}'::text[]))) || to_tsvector('english'::regconfig, (submitted_application ->> 'reference'::text)))", stored: true
-    t.string "offense_class"
+    t.string "offence_class"
     t.jsonb "return_details"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["applicant_last_name", "applicant_first_name"], name: "index_crime_applications_on_applicant_name"
     t.index ["reference"], name: "index_crime_applications_on_reference"
     t.index ["review_status", "reviewed_at"], name: "index_crime_applications_on_review_status_and_reviewed_at"
     t.index ["review_status", "submitted_at"], name: "index_crime_applications_on_review_status_and_submitted_at"
+    t.index ["searchable_text"], name: "index_crime_applications_on_searchable_text", using: :gin
     t.index ["status", "returned_at"], name: "index_crime_applications_on_status_and_returned_at", order: { returned_at: :desc }
     t.index ["status", "reviewed_at"], name: "index_crime_applications_on_status_and_reviewed_at", order: { reviewed_at: :desc }
     t.index ["status", "submitted_at"], name: "index_crime_applications_on_status_and_submitted_at", order: { submitted_at: :desc }
     t.index ["status"], name: "index_crime_applications_on_status"
   end
 
+  create_table "redacted_crime_applications", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.uuid "crime_application_id"
+    t.jsonb "submitted_application", default: {}, null: false
+    t.jsonb "metadata", default: {}, null: false
+    t.virtual "status", type: :string, as: "(metadata ->> 'status'::text)", stored: true
+    t.index ["crime_application_id"], name: "index_redacted_crime_applications_on_crime_application_id", unique: true
+    t.index ["status"], name: "index_redacted_crime_applications_on_status"
+  end
+
+  add_foreign_key "redacted_crime_applications", "crime_applications"
 end

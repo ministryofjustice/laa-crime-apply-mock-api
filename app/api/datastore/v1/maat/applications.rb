@@ -9,6 +9,7 @@ module Datastore
         resource :applications do
           desc 'Create an application.'
           params do
+
             requires :application, type: JSON, desc: 'Application JSON payload.'
           end
           post do

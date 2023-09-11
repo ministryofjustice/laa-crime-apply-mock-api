@@ -1,7 +1,8 @@
 class CreateCrimeApplications < ActiveRecord::Migration[7.0]
   def change
-    create_table :crime_applications do |t|
-      enable_extension 'citext'
+    enable_extension 'citext'
+
+    create_table :crime_applications, id: :uuid do |t|
 
       t.jsonb :submitted_application
       t.string :status, null: false, default: 'submitted', index: true
@@ -36,12 +37,13 @@ class CreateCrimeApplications < ActiveRecord::Migration[7.0]
      to_tsvector('english', submitted_application->>'reference')", stored: true
       )
 
-      t.string :offense_class
+      t.string :offence_class
       t.jsonb :return_details
 
       t.timestamps
     end
 
+    add_index :crime_applications, :searchable_text, using: :gin
     add_index :crime_applications, [:status, :submitted_at], order: { submitted_at: :desc}
     add_index :crime_applications, [:status, :returned_at], order: { returned_at: :desc}
     add_index :crime_applications, [:status, :reviewed_at], order: { reviewed_at: :desc}
@@ -49,7 +51,5 @@ class CreateCrimeApplications < ActiveRecord::Migration[7.0]
     add_index :crime_applications, [:applicant_last_name, :applicant_first_name], name: 'index_crime_applications_on_applicant_name'
     add_index :crime_applications, [:review_status, :submitted_at]
     add_index :crime_applications, [:review_status, :reviewed_at]
-
-    disable_extension 'citext'
   end
 end
