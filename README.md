@@ -6,7 +6,7 @@ This application is created for LAA Crime Application Adaptor.
 - [**Contact the team**](#contact-the-team)
 - [**Environments**](#environments)
 - [**Dependencies**](#dependencies)
-- [**Set up**](#set-up)
+- [**Set up (Docker)**](#set-up)
 - [**Contributing**](#contributing)
 
 ## Contact the team
@@ -27,11 +27,18 @@ Install dependencies with bundler:
 ```
 bundle install
 ```
-## Set up
+## Set up (Docker)
 
-To set up LAA Crime Apply Mock API in your local machine, you can run the rails server manually:
-- Run Rails (the application server) - rails server
-- Visit http://localhost:3000/api/message
+You should run the application using Docker. To do so, run the following commands from inside the project directory:
+
+```
+docker-compose build
+```
+```
+docker-compose up
+```
+
+The database will be set up as part of the build command above. The application will run at http://localhost:3003/.
 
 ## Contributing
 
