@@ -16,7 +16,7 @@ RUN mkdir -p /usr/src/app && \
 
 WORKDIR /usr/src/app
 
-COPY Gemfile* .ruby-version ./
+COPY Gemfile Gemfile.lock .ruby-version ./
 
 RUN gem install bundler && \
     bundle config set frozen 'true' && \
