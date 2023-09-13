@@ -44,12 +44,12 @@ Bug reports and pull requests are welcome.
 5. Make sure your changes are covered by tests, so that we don't break it unintentionally in the future.
 6. Create a new pull request.
 
-## API Authentication/Authorisation
-How to Authenticate/Authorise APIs:
+## Generate JWT and Authenticate With Mock Application
 
-1. Edit and add to the verify_jwt.rb script an OAuth2 JWT bearer token obtained from Cognito as well as a Cognito server link to the public keys.
-2. Run the verify_jwt.io script to obtain the public key to verify JWT tokens.
-3. Save the public key as a public_key.pem in the config folder.
-4. Edit and add the public key string to the relevant .env file or wherever you want to store the public key string.
-5. Edit the simple_jwt_auth.rb script to add the relevant JWT issuer that we want to allow to access our APIs.
-6. Edit the relevant API route setting to allow the new authorised consumer (JWT issuer) of that API.
+This mock API utilizes symmetrical HS256 encryption using a shared private secret to authenticate/authorise.
+To test this app locally we can generate our own JWT using a Java command line app at the root of the project, 
+specifically made for this purpose. This java jar app is called command-line-jwt-generator.jar and to use this:
+
+1. run "java -jar command-line-jwt-generator.jar <BASE_64_ENCODED_SECRET_FOUND_IN_ENV_DEVELOPMENT> <ISSUER>" from the root directory 
+2. As you can see it takes two parameters: a base64 encoded string that can be found in the relevant .env file BASE64 decoded (you need to encode); Also, an issuer - this is the app that would normally be issuing the JWT. In our case "crime-apply" would normally issue this JWT to communicate to our mock.
+3. When we call the app endpoint using Postman/CURL we can now use this Bearer token JWT to authenticate/authorize with our app.
