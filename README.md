@@ -30,7 +30,7 @@ bundle install
 ## Set up
 
 To set up LAA Crime Apply Mock API in your local machine, you can run the rails server manually:
-- Run Rails (the application server) - rails server2
+- Run Rails (the application server) - rails server
 - Visit http://localhost:3000/api/message
 
 ## Contributing
