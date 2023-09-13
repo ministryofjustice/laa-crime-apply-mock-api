@@ -1,7 +1,6 @@
 class CrimeApplication < ApplicationRecord
   include Redactable
 
-  attr :submitted_application, :submitted_at
   attr_readonly :id
   enum status: Types::ApplicationStatus.mapping
   enum review_status: Types::ReviewApplicationStatus.mapping
