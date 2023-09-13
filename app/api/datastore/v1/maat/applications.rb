@@ -4,7 +4,7 @@ module Datastore
       class Applications < Base
         version 'v1', using: :path
 
-        route_setting :authorised_consumers, %w[crime-apply]
+        route_setting :authorised_consumers, %w[maat-adapter-dev maat-adapter-uat]
 
         resource :applications do
           desc 'Return an application by USN.'

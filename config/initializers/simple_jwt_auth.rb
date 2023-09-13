@@ -15,7 +15,8 @@ Rails.application.config.to_prepare do
     # A map of consumers of the API and their secrets
     # On kubernetes, secrets are created by terraform
     config.secrets_config = {
-      'crime-apply' => ENV.fetch('API_AUTH_SECRET_APPLY', nil)
+      'maat-adapter-dev' => ENV.fetch('API_AUTH_SECRET_MAAT_ADAPTER_DEV', nil),
+      'maat-adapter-uat' => ENV.fetch('API_AUTH_SECRET_MAAT_ADAPTER_UAT', nil)
     }
   end
 end
