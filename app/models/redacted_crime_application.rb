@@ -1,2 +1,0 @@
-class RedactedCrimeApplication < ApplicationRecord
-end

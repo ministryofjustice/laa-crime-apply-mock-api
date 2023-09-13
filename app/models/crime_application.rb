@@ -1,5 +1,4 @@
 class CrimeApplication < ApplicationRecord
-  include Redactable
 
   attr_readonly :id
   enum status: Types::ApplicationStatus.mapping
