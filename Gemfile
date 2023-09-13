@@ -31,7 +31,7 @@ gem "stimulus-rails"
 gem "jbuilder"
 
 gem 'grape', '~> 1.7.0'
-gem 'grape-entity', '~> 0.10.2'
+gem 'grape-entity', '~> 1.0.0'
 gem 'grape_logging'
 gem 'kaminari-activerecord'
 
