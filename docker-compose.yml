@@ -29,6 +29,8 @@ services:
       PROMETHEUS_EXPORTER_PORT: 9397
       API_AUTH_SECRET_APPLY: foobar
       API_AUTH_SECRET_REVIEW: foobar
+      API_AUTH_SECRET_MAAT_ADAPTER_DEV: somesecretkeysomesecretkeysomesecretkeysomesecretkeysomesecretkeysomesecretkeysomesecretkeysomesecretkey
+      API_AUTH_SECRET_MAAT_ADAPTER_UAT: somesecretkeysomesecretkeysomesecretkeysomesecretkeysomesecretkeysomesecretkeysomesecretkeysomesecretkey
     ports:
       - "3003:3003" # puma server (rails app)
       - "9397:9397" # prometheus exporter `/metrics` endpoint
