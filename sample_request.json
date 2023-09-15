@@ -1,0 +1,70 @@
+{
+  "application": {
+    "id": "z094ee73-166c-4fde-a1c7-cb6ffb880166",
+    "parent_id": null,
+    "reference": 10000133,
+    "created_at": "2023-08-17T08:51:25.837Z",
+    "date_stamp": "2023-08-17T08:53:52.201Z",
+    "case_details": {
+      "urn": "1234",
+      "offences": [
+        {
+          "name": "Armed robbery",
+          "dates": [
+            {
+              "date_to": null,
+              "date_from": "2022-01-10"
+            }
+          ],
+          "offence_class": "B",
+          "slipstreamable": true
+        }
+      ],
+      "case_type": "indictable",
+      "codefendants": [],
+      "hearing_date": "2023-09-25",
+      "appeal_maat_id": null,
+      "appeal_lodged_date": null,
+      "hearing_court_name": "Camberwell Green Magistrates' Court",
+      "appeal_with_changes_details": null
+    },
+    "ioj_passport": [
+      "on_age_under18",
+      "on_offence"
+    ],
+    "submitted_at": "2023-08-17T08:53:52.201Z",
+    "client_details": {
+      "applicant": {
+        "nino": null,
+        "last_name": "Bob",
+        "first_name": "Jim",
+        "other_names": "",
+        "home_address": {
+          "city": "LONDON",
+          "country": "UNITED KINGDOM",
+          "postcode": "NW3 ABC",
+          "lookup_id": "12345678",
+          "address_line_one": "SAMPLE CLOSE",
+          "address_line_two": "FIRST ROAD"
+        },
+        "date_of_birth": "2008-12-10",
+        "telephone_number": "",
+        "correspondence_address": null,
+        "correspondence_address_type": "home_address"
+      }
+    },
+    "means_passport": [
+      "on_age_under18"
+    ],
+    "schema_version": 1,
+    "application_type": "initial",
+    "provider_details": {
+      "office_code": "AB1234",
+      "provider_email": "provider@example.com",
+      "legal_rep_last_name": "Smith",
+      "legal_rep_telephone": "123456789",
+      "legal_rep_first_name": "John"
+    },
+    "interests_of_justice": []
+  }
+}
