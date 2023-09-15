@@ -27,8 +27,6 @@ services:
       RAILS_SERVE_STATIC_FILES: "1"
       ENABLE_PROMETHEUS_EXPORTER: "false" # can be enabled for quick tests
       PROMETHEUS_EXPORTER_PORT: 9397
-      API_AUTH_SECRET_APPLY: foobar
-      API_AUTH_SECRET_REVIEW: foobar
       API_AUTH_SECRET_MAAT_ADAPTER_DEV: somesecretkeysomesecretkeysomesecretkeysomesecretkeysomesecretkeysomesecretkeysomesecretkeysomesecretkey
       API_AUTH_SECRET_MAAT_ADAPTER_UAT: somesecretkeysomesecretkeysomesecretkeysomesecretkeysomesecretkeysomesecretkeysomesecretkeysomesecretkey
     ports:
