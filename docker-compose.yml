@@ -25,13 +25,10 @@ services:
       DATABASE_SSLMODE: disable
       DISABLE_HTTPS: "1"
       RAILS_SERVE_STATIC_FILES: "1"
-      ENABLE_PROMETHEUS_EXPORTER: "false" # can be enabled for quick tests
-      PROMETHEUS_EXPORTER_PORT: 9397
       API_AUTH_SECRET_MAAT_ADAPTER_DEV: somesecretkeysomesecretkeysomesecretkeysomesecretkeysomesecretkeysomesecretkeysomesecretkeysomesecretkey
       API_AUTH_SECRET_MAAT_ADAPTER_UAT: somesecretkeysomesecretkeysomesecretkeysomesecretkeysomesecretkeysomesecretkeysomesecretkeysomesecretkey
     ports:
       - "3003:3003" # puma server (rails app)
-      - "9397:9397" # prometheus exporter `/metrics` endpoint
     depends_on:
       - db
     volumes:
