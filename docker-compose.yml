@@ -1,0 +1,35 @@
+# Simplify running the application inside a container locally.
+# Usage: `docker-compose up`
+#
+# Do not use docker-compose in production environments.
+#
+version: '3.4'
+
+services:
+  db:
+    image: postgres:15.2-alpine
+    environment:
+      POSTGRES_HOST_AUTH_METHOD: trust
+    ports:
+      - "5432:5432"
+
+  web:
+    build: .
+    environment:
+      ENV_NAME: development
+      RACK_ENV: development
+      RAILS_ENV: development
+      PORT: 3003
+      SECRET_KEY_BASE: 6ac192ecbd4b8c4887d3ea1d2532b1f470f33ed56623d8236c52a5555fec36ac2d1fdd86d313bdf6c7f389eaccc79b66480aadca02afb8401c81b67a77f4b6b4
+      DATABASE_URL: postgresql://postgres@db/laa-crime-apply-mock-api
+      DATABASE_SSLMODE: disable
+      DISABLE_HTTPS: "1"
+      RAILS_SERVE_STATIC_FILES: "1"
+      API_AUTH_SECRET_MAAT_ADAPTER_DEV: somesecretkeysomesecretkeysomesecretkeysomesecretkeysomesecretkeysomesecretkeysomesecretkeysomesecretkey
+      API_AUTH_SECRET_MAAT_ADAPTER_UAT: somesecretkeysomesecretkeysomesecretkeysomesecretkeysomesecretkeysomesecretkeysomesecretkeysomesecretkey
+    ports:
+      - "3003:3003" # puma server (rails app)
+    depends_on:
+      - db
+    volumes:
+      - ./:/usr/src/app
