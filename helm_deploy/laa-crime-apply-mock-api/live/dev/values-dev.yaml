@@ -86,14 +86,6 @@ caSecret:
   # The name to be set for the ca secret
   name: "ca-secret"
 
-webhookSecret:
-  # Specifies whether a webhook secret should be created
-  create: true
-  # The name to be set for the webhook secret
-  name: "webhook-secret"
-  # The value to be set for the webhook secret
-  value: https://hooks.slack.com/services/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
-
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
   # choice for the user. This also increases chances charts run on environments with little
