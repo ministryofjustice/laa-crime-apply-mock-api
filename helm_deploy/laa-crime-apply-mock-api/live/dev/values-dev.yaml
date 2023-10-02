@@ -1,0 +1,120 @@
+# Default values for laa-crime-apply-mock-api.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 2
+workerReplicaCount: 1
+
+image:
+  repository: 754256621582.dkr.ecr.eu-west-2.amazonaws.com/laa-crime-apps-team/laa-crime-apply-mock-api
+  pullPolicy: IfNotPresent
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: latest
+
+sentry_dsn:
+aws_region: eu-west-2
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+mtls_enabled: false
+
+rails:
+  host_env: dev
+  secret_key_base: 6ac192ecbd4b8c4887d3ea1d2532b1f470f33ed56623d8236c52a5555fec36ac2d1fdd86d313bdf6c7f389eaccc79b66480aadca02afb8401c81b67a77f4b6b4
+
+serviceAccount:
+  # Specifies whether a service account should be created
+  create: false
+  # Annotations to add to the service account
+  annotations: {}
+  # The name of the service account to use.
+  # If not set and create is true, a name is generated using the fullname template
+  name: "laa-crime-apply-mock-api"
+
+podAnnotations: {}
+
+podSecurityContext: {}
+  # fsGroup: 2000
+
+securityContext: {}
+  # capabilities:
+  #   drop:
+  #   - ALL
+  # readOnlyRootFilesystem: true
+  # runAsNonRoot: true
+  # runAsUser: 1000
+
+service:
+  type: ClusterIP
+  port: 3000
+
+ingress:
+  enabled: true
+  className: modsec
+  annotations:
+    external-dns.alpha.kubernetes.io/set-identifier: laa-crime-apply-mock-api-laa-crime-apply-mock-api-dev-green
+    external-dns.alpha.kubernetes.io/aws-weight: "100"
+    nginx.ingress.kubernetes.io/enable-modsecurity: "true"
+  externalAnnotations:
+    external-dns.alpha.kubernetes.io/set-identifier: laa-crime-apply-mock-api-external-laa-crime-apply-mock-api-dev-green
+    external-dns.alpha.kubernetes.io/aws-weight: "100"
+  hosts:
+    - host: laa-crime-apply-mock-api-dev.apps.live-1.cloud-platform.service.justice.gov.uk
+      paths: ["/"]
+    - host: laa-crime-apply-mock-api-dev.apps.live.cloud-platform.service.justice.gov.uk
+      paths: ["/"]
+  #externalHosts:
+    #- host: dev.court-data-adaptor.service.justice.gov.uk
+     # paths: ["/"]
+
+  tls: []
+  #  - secretName: chart-example-tls
+  #    hosts:
+  #      - chart-example.local
+ # externalTls:
+   # - secretName: laa-crime-apply-mock-api-dev-cert
+      #hosts:
+        #- dev.court-data-adaptor.service.justice.gov.uk
+
+caSecret:
+  # Specifies whether a CA secret should be created
+  create: false
+  # The path to the file to use as the CA certificate.
+  ca_crt_file: live/dev/ca.crt
+  # The name to be set for the ca secret
+  name: "ca-secret"
+
+webhookSecret:
+  # Specifies whether a webhook secret should be created
+  create: true
+  # The name to be set for the webhook secret
+  name: "webhook-secret"
+  # The value to be set for the webhook secret
+  value: https://hooks.slack.com/services/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
+
+resources: {}
+  # We usually recommend not to specify default resources and to leave this as a conscious
+  # choice for the user. This also increases chances charts run on environments with little
+  # resources, such as Minikube. If you do want to specify resources, uncomment the following
+  # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+  # limits:
+  #   cpu: 100m
+  #   memory: 128Mi
+  # requests:
+  #   cpu: 100m
+  #   memory: 128Mi
+
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 100
+  targetCPUUtilizationPercentage: 80
+  # targetMemoryUtilizationPercentage: 80
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
