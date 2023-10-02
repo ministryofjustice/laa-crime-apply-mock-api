@@ -80,6 +80,9 @@ end
 
 group :test do
   gem 'brakeman'
+  gem "json-schema-rspec"
+  gem "rspec_junit_formatter"
+  gem "shoulda-matchers"
   gem 'rubocop', require: false
   gem 'rubocop-performance', require: false
   gem 'rubocop-rails', require: false
