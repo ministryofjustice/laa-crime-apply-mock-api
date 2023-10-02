@@ -8,13 +8,14 @@ orbs:
   helm: circleci/helm@1.1.2
 
 #commands:
-  #checkout_and_decrypt:
-   # steps:
-      #- checkout
-      #- run: sudo apt-get update
-      #- run: sudo apt-get install git-crypt
-     # - run: echo "${GIT_CRYPT_KEY}" | base64 -d > git-crypt.key
-          #- run: git-crypt unlock git-crypt.key
+commands:
+  checkout_and_decrypt:
+    steps:
+      - checkout
+      - run: sudo apt-get update
+      - run: sudo apt-get install git-crypt
+      - run: echo "${GIT_CRYPT_KEY}" | base64 -d > git-crypt.key
+      - run: git-crypt unlock git-crypt.key
 
 jobs:
   test:
