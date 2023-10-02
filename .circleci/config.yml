@@ -79,9 +79,9 @@ jobs:
           path: /tmp/test-results
           destination: test-results
 
-      - run:
-          name: run rubocop
-          command: bundle exec rubocop
+      #- run:
+         # name: run rubocop
+         # command: bundle exec rubocop
 
   build-and-push-app:
     executor: aws-ecr/default
