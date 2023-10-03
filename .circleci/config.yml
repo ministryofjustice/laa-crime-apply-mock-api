@@ -111,7 +111,7 @@ jobs:
           command: |
             echo -n ${CLUSTER_CERT_LIVE} | base64 -d > ./ca.crt
             kubectl config set-cluster ${CLUSTER_NAME_LIVE} --certificate-authority=./ca.crt --server=https://${CLUSTER_NAME_LIVE}
-            kubectl config set-credentials circleci --token=<< parameters.token >>
+            kubectl config set-credentials circleci --token=${CIRCLE_CI_TOKEN_DEV_LIVE}
             kubectl config set-context ${CLUSTER_NAME_LIVE} --cluster=${CLUSTER_NAME_LIVE} --user=circleci --namespace=laa-crime-apply-mock-api-dev
             kubectl config use-context ${CLUSTER_NAME_LIVE}
             kubectl --namespace=laa-crime-apply-mock-api-dev get pods
