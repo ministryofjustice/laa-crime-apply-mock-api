@@ -7,7 +7,7 @@ default: &default
 development:
   <<: *default
   url: <%= ENV('DATABASE_URL') %>
-  password: <%= ENV('POSTGRES_PASSWORD' %>
+  password: <%= ENV('POSTGRES_PASSWORD') %>
 
 test:
   <<: *default
