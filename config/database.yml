@@ -2,11 +2,12 @@ default: &default
   adapter: postgresql
   encoding: unicode
   database: laa-crime-apply-mock-api
+  port: 5432
   pool: <%= ENV.fetch('RAILS_MAX_THREADS', 5) %>
 
 development:
   <<: *default
-  url: <%= ENV.fetch('DATABASE_URL') { 'postgresql://postgres@postgres::5432/laa-crime-apply-mock-api' } %>
+  url: <%= ENV.fetch('DATABASE_URL') { 'postgresql://postgres@postgres:5432/laa-crime-apply-mock-api' } %>
   password: <%= ENV.fetch('POSTGRES_PASSWORD') { 'password' } %>
 
 test:
