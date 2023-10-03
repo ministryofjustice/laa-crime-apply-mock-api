@@ -86,14 +86,17 @@ jobs:
          # command: bundle exec rubocop
 
   build-and-push-app:
-    #executor: aws-ecr/default
+    executor: aws-ecr/default
     docker:
       - image: cimg/ruby:3.2.2
       - image: cimg/postgres:15.2
     working_directory: ~/laa-crime-apply-mock-api
     steps:
       - checkout
-
+      - attach_workspace:
+          at: .
+      - setup_remote_docker:
+          docker_layer_caching: true
       - aws-cli/setup:
           role_arn: $ECR_ROLE_TO_ASSUME
           region: $ECR_REGION
