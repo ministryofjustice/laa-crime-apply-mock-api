@@ -5,7 +5,7 @@ Environment variables for api and worker containers
 {{- define "laa-crime-apply-mock-api.env-vars" }}
 env:
   - name: RAILS_ENV
-    value: 'production'
+    value: {{ .Values.rails.host_env }}
   - name: HOST_ENV
     value: {{ .Values.rails.host_env }}
   - name: SECRET_KEY_BASE
