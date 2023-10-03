@@ -101,13 +101,6 @@ jobs:
 
   install_on_dev_live:
     executor: aws-eks/python
-    parameters:
-      environment:
-        description: Destination environment
-        type: string
-      token:
-        description: CircleCI Service account token
-        type: string
     steps:
       - checkout_and_decrypt
       - kubernetes/install-kubectl
@@ -118,9 +111,10 @@ jobs:
           command: |
             echo -n ${CLUSTER_CERT_LIVE} | base64 -d > ./ca.crt
             kubectl config set-cluster ${CLUSTER_NAME_LIVE} --certificate-authority=./ca.crt --server=https://${CLUSTER_NAME_LIVE}
-            kubectl config set-credentials circleci --token=<< parameters.token >>
+            kubectl config set-credentials circleci --token=${CIRCLE_CI_TOKEN_DEV_LIVE}
             kubectl config set-context ${CLUSTER_NAME_LIVE} --cluster=${CLUSTER_NAME_LIVE} --user=circleci --namespace=laa-crime-apply-mock-api-dev
             kubectl config use-context ${CLUSTER_NAME_LIVE}
+            kubectl config current-context
             kubectl --namespace=laa-crime-apply-mock-api-dev get pods
       - helm/upgrade-helm-chart:
           namespace: laa-crime-apply-mock-api-dev
