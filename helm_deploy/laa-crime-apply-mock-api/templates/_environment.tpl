@@ -16,6 +16,4 @@ env:
     value: {{ .Values.sentry_dsn }}
   - name: SENTRY_CURRENT_ENV
     value: {{ .Values.rails.host_env }}
-  - name: DATABASE_URL
-    value: 'postgresql://postgres@localhost/laa-crime-apply-mock-api'
 {{- end -}}
