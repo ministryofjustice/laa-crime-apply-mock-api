@@ -22,11 +22,11 @@ jobs:
     docker:
       - image: cimg/ruby:3.2.2
         environment:
-         DATABASE_URL: postgresql://ubuntu@localhost:5432/laa-crime-apply-mock-api
-         RAILS_ENV: test
+          PAGER: cat
+          DATABASE_URL: postgresql://postgres@localhost/laa-crime-apply-mock-api
+          RAILS_ENV: test
       - image: cimg/postgres:15.2
         environment:
-          POSTGRES_USER: ubuntu
           POSTGRES_DB: laa-crime-apply-mock-api
     steps:
       - checkout
