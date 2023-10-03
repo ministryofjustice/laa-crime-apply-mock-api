@@ -16,4 +16,6 @@ env:
     value: {{ .Values.sentry_dsn }}
   - name: SENTRY_CURRENT_ENV
     value: {{ .Values.rails.host_env }}
+  - name: POSTGRES_PASSWORD
+    value: {{ .Values.db.password }}
 {{- end -}}
