@@ -90,8 +90,6 @@ jobs:
     docker:
       - image: cimg/ruby:3.2.2
       - image: cimg/postgres:15.2
-        environment:
-          POSTGRES_PASSWORD: postgres
     working_directory: ~/laa-crime-apply-mock-api
     steps:
       - checkout
