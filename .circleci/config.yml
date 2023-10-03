@@ -22,11 +22,15 @@ jobs:
     docker:
       - image: cimg/ruby:3.2.2
         environment:
-          PAGER: cat
-          DATABASE_URL: postgresql://postgres@localhost/laa-crime-apply-mock-api
+          PG_HOST: localhost
+          PG_USER: ubuntu
           RAILS_ENV: test
+          RACK_ENV: test
+         # DATABASE_URL: postgresql://postgres@localhost/laa-crime-apply-mock-api
+          #RAILS_ENV: test
       - image: cimg/postgres:15.2
         environment:
+          POSTGRES_USER: ubuntu
           POSTGRES_DB: laa-crime-apply-mock-api
     steps:
       - checkout
@@ -45,6 +49,8 @@ jobs:
           name: install dependencies
           command: |
             bundle check || bundle install --jobs=4 --retry=3
+        environment:
+         DATABASE_URL: "postgres://ubuntu@localhost:5432/laa-crime-apply-mock-api"
 
       - save_cache:
           paths:
@@ -84,10 +90,7 @@ jobs:
          # command: bundle exec rubocop
 
   build-and-push-app:
-    #executor: aws-ecr/default
-    docker:
-      - image: cimg/ruby:3.2.2
-      - image: cimg/postgres:15.2
+    executor: aws-ecr/default
     steps:
       - checkout
 
