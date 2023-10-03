@@ -24,7 +24,7 @@ jobs:
         environment:
           PAGER: cat
           DATABASE_URL: postgresql://postgres@localhost/laa-crime-apply-mock-api
-          RAILS_ENV: test
+          RAILS_ENV: dev
       - image: cimg/postgres:15.2
         environment:
           POSTGRES_DB: laa-crime-apply-mock-api
