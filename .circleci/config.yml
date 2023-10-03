@@ -124,56 +124,6 @@ jobs:
           values: ./helm_deploy/laa-crime-apply-mock-api/live/dev/values-dev.yaml
           values-to-override: image.tag=$CIRCLE_SHA1
 
-  install_on_test_live:
-    executor: aws-eks/python
-    steps:
-      - checkout_and_decrypt
-      - kubernetes/install-kubectl
-      - helm/install-helm-client:
-          version: 'v3.2.4'
-      - run:
-          name: Authenticate to LIVE cluster
-          command: |
-            echo -n ${CLUSTER_CERT_LIVE} | base64 -d > ./live_ca.crt
-            kubectl config set-cluster ${CLUSTER_NAME_LIVE} --certificate-authority=./live_ca.crt --server=https://${CLUSTER_NAME_LIVE}
-            kubectl config set-credentials circleci --token=${CIRCLE_CI_TOKEN_TEST_LIVE}
-            kubectl config set-context ${CLUSTER_NAME_LIVE} --cluster=${CLUSTER_NAME_LIVE} --user=circleci --namespace=laa-crime-apply-mock-api-test
-            kubectl config use-context ${CLUSTER_NAME_LIVE}
-            kubectl config current-context
-            kubectl --namespace=laa-crime-apply-mock-api-test get pods
-      - helm/upgrade-helm-chart:
-          namespace: laa-crime-apply-mock-api-test
-          update-repositories: false
-          chart: ./helm_deploy/laa-crime-apply-mock-api
-          release-name: laa-crime-apply-mock-api
-          values: ./helm_deploy/laa-crime-apply-mock-api/live/test/values-test.yaml
-          values-to-override: image.tag=$CIRCLE_SHA1
-
-  install_on_stage_live:
-    executor: aws-eks/python
-    steps:
-      - checkout_and_decrypt
-      - kubernetes/install-kubectl
-      - helm/install-helm-client:
-          version: 'v3.2.4'
-      - run:
-          name: Authenticate to LIVE cluster
-          command: |
-            echo -n ${CLUSTER_CERT_LIVE} | base64 -d > ./live_ca.crt
-            kubectl config set-cluster ${CLUSTER_NAME_LIVE} --certificate-authority=./live_ca.crt --server=https://${CLUSTER_NAME_LIVE}
-            kubectl config set-credentials circleci --token=${CIRCLE_CI_TOKEN_STAGE_LIVE}
-            kubectl config set-context ${CLUSTER_NAME_LIVE} --cluster=${CLUSTER_NAME_LIVE} --user=circleci --namespace=laa-crime-apply-mock-api-stage
-            kubectl config use-context ${CLUSTER_NAME_LIVE}
-            kubectl config current-context
-            kubectl --namespace=laa-crime-apply-mock-api-stage get pods
-      - helm/upgrade-helm-chart:
-          namespace: laa-crime-apply-mock-api-stage
-          update-repositories: false
-          chart: ./helm_deploy/laa-crime-apply-mock-api
-          release-name: laa-crime-apply-mock-api
-          values: ./helm_deploy/laa-crime-apply-mock-api/live/stage/values-stage.yaml
-          values-to-override: image.tag=$CIRCLE_SHA1
-
   install_on_uat_live:
     executor: aws-eks/python
     steps:
@@ -197,31 +147,6 @@ jobs:
           chart: ./helm_deploy/laa-crime-apply-mock-api
           release-name: laa-crime-apply-mock-api
           values: ./helm_deploy/laa-crime-apply-mock-api/live/uat/values-uat.yaml
-          values-to-override: image.tag=$CIRCLE_SHA1
-
-  install_on_prod_live:
-    executor: aws-eks/python
-    steps:
-      - checkout_and_decrypt
-      - kubernetes/install-kubectl
-      - helm/install-helm-client:
-          version: 'v3.2.4'
-      - run:
-          name: Authenticate to LIVE cluster
-          command: |
-            echo -n ${CLUSTER_CERT_LIVE} | base64 -d > ./live_ca.crt
-            kubectl config set-cluster ${CLUSTER_NAME_LIVE} --certificate-authority=./live_ca.crt --server=https://${CLUSTER_NAME_LIVE}
-            kubectl config set-credentials circleci --token=${CIRCLE_CI_TOKEN_PROD_LIVE}
-            kubectl config set-context ${CLUSTER_NAME_LIVE} --cluster=${CLUSTER_NAME_LIVE} --user=circleci --namespace=laa-crime-apply-mock-api-prod
-            kubectl config use-context ${CLUSTER_NAME_LIVE}
-            kubectl config current-context
-            kubectl --namespace=laa-crime-apply-mock-api-prod get pods
-      - helm/upgrade-helm-chart:
-          namespace: laa-crime-apply-mock-api-prod
-          update-repositories: false
-          chart: ./helm_deploy/laa-crime-apply-mock-api
-          release-name: laa-crime-apply-mock-api
-          values: ./helm_deploy/laa-crime-apply-mock-api/live/prod/values-prod.yaml
           values-to-override: image.tag=$CIRCLE_SHA1
 
 workflows:
