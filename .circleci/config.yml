@@ -87,13 +87,7 @@ jobs:
     #executor: aws-ecr/default
     docker:
       - image: cimg/ruby:3.2.2
-        environment:
-          POSTGRES_HOST_AUTH_METHOD: trust
-          DATABASE_URL: postgresql://postgres@localhost/laa-crime-apply-mock-api
       - image: cimg/postgres:15.2
-        environment:
-          POSTGRES_HOST_AUTH_METHOD: trust
-          POSTGRES_DB: laa-crime-apply-mock-api
     steps:
       - checkout
 
