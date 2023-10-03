@@ -134,15 +134,15 @@ jobs:
       - run:
           name: Authenticate to LIVE cluster
           command: |
-            echo -n ${CLUSTER_CERT_LIVE} | base64 -d > ./live_ca.crt
-            kubectl config set-cluster ${CLUSTER_NAME_LIVE} --certificate-authority=./live_ca.crt --server=https://${CLUSTER_NAME_LIVE}
+            echo -n ${CLUSTER_CERT_LIVE} | base64 -d > ./ca.crt
+            kubectl config set-cluster ${CLUSTER_NAME_LIVE} --certificate-authority=./ca.crt --server=https://${CLUSTER_NAME_LIVE}
             kubectl config set-credentials circleci --token=${CIRCLE_CI_TOKEN_UAT_LIVE}
-            kubectl config set-context ${CLUSTER_NAME_LIVE} --cluster=${CLUSTER_NAME_LIVE} --user=circleci --namespace=laa-crime-apply-mock-api-uat
+            kubectl config set-context ${CLUSTER_NAME_LIVE} --cluster=${CLUSTER_NAME_LIVE} --user=circleci --namespace=laa-crime-apply-mock-uat
             kubectl config use-context ${CLUSTER_NAME_LIVE}
             kubectl config current-context
-            kubectl --namespace=laa-crime-apply-mock-api-uat get pods
+            kubectl --namespace=laa-crime-apply-mock-uat get pods
       - helm/upgrade-helm-chart:
-          namespace: laa-crime-apply-mock-api-uat
+          namespace: laa-crime-apply-mock-uat
           update-repositories: false
           chart: ./helm_deploy/laa-crime-apply-mock-api
           release-name: laa-crime-apply-mock-api
