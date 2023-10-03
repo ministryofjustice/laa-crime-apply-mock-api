@@ -6,8 +6,8 @@ default: &default
 
 development:
   <<: *default
-  url: <%= ENV['DATABASE_URL'] %>
-  password: <%= ENV['POSTGRES_PASSWORD'] %>
+  url: <%= ENV.fetch('DATABASE_URL') { 'postgresql://postgres@postgres/laa-crime-apply-mock-api' } %>
+  password: <%= ENV.fetch('POSTGRES_PASSWORD') { 'password' } %>
 
 test:
   <<: *default
