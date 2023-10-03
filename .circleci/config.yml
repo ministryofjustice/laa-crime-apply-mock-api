@@ -117,7 +117,7 @@ jobs:
             kubectl config current-context
             kubectl --namespace=laa-crime-apply-mock-dev get pods
       - helm/upgrade-helm-chart:
-          namespace: laa-crime-apply-mock-api-dev
+          namespace: laa-crime-apply-mock-dev
           update-repositories: false
           chart: ./helm_deploy/laa-crime-apply-mock-api
           release-name: laa-crime-apply-mock-api
