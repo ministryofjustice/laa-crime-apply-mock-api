@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: {{ include "laa-crime-apply-mock-api.fullname" . }}-db
 spec:
-  replicas: 1
+  replicas: {{ .Values.dbReplicaCount }}
   selector:
     matchLabels:
       app: {{ include "laa-crime-apply-mock-api.fullname" . }}-db
@@ -22,7 +22,7 @@ spec:
       containers:
         - name: {{ include "laa-crime-apply-mock-api.fullname" . }}-db
           securityContext:
-            {{- toYaml .Values.securityContext | nindent 12 }}
+            runAsUser: 70
           image: "postgres:15.2-alpine"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
@@ -40,11 +40,6 @@ spec:
               value: {{ .Values.db.dbname }}
             - name: ALLOW_EMPTY_PASSWORD
               value: "yes"
-          volumeMounts:
-            - mountPath: /var/lib/postgresql/data
-              name: postgredb
-      volumes:
-        - name: postgredb
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
