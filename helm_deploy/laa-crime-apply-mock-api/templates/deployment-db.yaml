@@ -42,6 +42,11 @@ spec:
               value: {{ .Values.db.dbname }}
             - name: ALLOW_EMPTY_PASSWORD
               value: "yes"
+          volumeMounts:
+            - mountPath: /var/lib/postgresql/data
+              name: postgredb
+      volumes:
+        - name: postgredb
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
