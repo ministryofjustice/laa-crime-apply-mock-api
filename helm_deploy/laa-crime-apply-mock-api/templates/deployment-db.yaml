@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: {{ include "laa-crime-apply-mock-api.fullname" . }}-db
 spec:
-  replicas: 1
+  replicas: {{ .Values.dbReplicaCount }}
   selector:
     matchLabels:
       app: {{ include "laa-crime-apply-mock-api.fullname" . }}-db
