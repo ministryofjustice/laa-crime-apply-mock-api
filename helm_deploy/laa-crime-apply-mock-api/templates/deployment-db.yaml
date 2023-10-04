@@ -24,6 +24,7 @@ spec:
           securityContext:
             runAsUser: 999
             runAsGroup: 999
+            privileged: true
           image: "postgres:15.2-alpine"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
