@@ -7,7 +7,7 @@ default: &default
 
 development:
   <<: *default
-  url: <%= ENV.fetch('DATABASE_URL') { 'postgresql://postgres:postgres@postgres:5432/laa-crime-apply-mock-api' } %>
+  url: <%= ENV.fetch('DATABASE_URL') { 'postgresql://postgres:postgres@localhost:5432/laa-crime-apply-mock-api' } %>
 
 test:
   <<: *default
