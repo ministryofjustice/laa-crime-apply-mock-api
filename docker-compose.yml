@@ -19,7 +19,7 @@ services:
       ENV_NAME: development
       RACK_ENV: development
       RAILS_ENV: development
-      PORT: 3003
+      PORT: 3000
       SECRET_KEY_BASE: 6ac192ecbd4b8c4887d3ea1d2532b1f470f33ed56623d8236c52a5555fec36ac2d1fdd86d313bdf6c7f389eaccc79b66480aadca02afb8401c81b67a77f4b6b4
       DATABASE_URL: postgresql://postgres@db/laa-crime-apply-mock-api
       DATABASE_SSLMODE: disable
@@ -28,7 +28,7 @@ services:
       API_AUTH_SECRET_MAAT_ADAPTER_DEV: somesecretkeysomesecretkeysomesecretkeysomesecretkeysomesecretkeysomesecretkeysomesecretkeysomesecretkey
       API_AUTH_SECRET_MAAT_ADAPTER_UAT: somesecretkeysomesecretkeysomesecretkeysomesecretkeysomesecretkeysomesecretkeysomesecretkeysomesecretkey
     ports:
-      - "3003:3003" # puma server (rails app)
+      - "3000:3000" # puma server (rails app)
     depends_on:
       - db
     volumes:
