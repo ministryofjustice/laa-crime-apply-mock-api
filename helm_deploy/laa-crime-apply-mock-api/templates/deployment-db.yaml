@@ -22,7 +22,7 @@ spec:
       containers:
         - name: {{ include "laa-crime-apply-mock-api.fullname" . }}-db
           securityContext:
-            runAsUser: 999
+            runAsUser: 70
             runAsGroup: 999
             privileged: true
           image: "postgres:15.2-alpine"
