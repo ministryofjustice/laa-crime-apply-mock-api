@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: {{ include "laa-crime-apply-mock-api.fullname" . }}-db
 spec:
-  replicas: {{ .Values.dbReplicaCount }}
+  replicas: 1
   selector:
     matchLabels:
       app: {{ include "laa-crime-apply-mock-api.fullname" . }}-db
@@ -24,7 +24,6 @@ spec:
           securityContext:
             runAsUser: 999
             runAsGroup: 999
-            privileged: true
           image: "postgres:15.2-alpine"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
