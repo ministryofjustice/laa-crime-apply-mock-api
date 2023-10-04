@@ -18,6 +18,8 @@ env:
     value: {{ .Values.rails.host_env }}
   - name: POSTGRES_PASSWORD
     value: {{ .Values.db.password }}
-  - name: DATABASE_URL
-    value: {{ .Values.db.dburl }}
+  - name: POSTGRES_USER
+    value: {{ .Values.db.username }}
+  - name: POSTGRES_DB
+    value: {{ .Values.db.dbname }}
 {{- end -}}
