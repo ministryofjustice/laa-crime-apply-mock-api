@@ -23,6 +23,7 @@ spec:
         - name: {{ include "laa-crime-apply-mock-api.fullname" . }}-db
           securityContext:
             runAsUser: 999
+            runAsGroup: 999
           image: "postgres:15.2-alpine"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
