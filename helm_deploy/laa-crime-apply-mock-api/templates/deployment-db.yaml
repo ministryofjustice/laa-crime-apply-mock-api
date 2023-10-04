@@ -23,7 +23,7 @@ spec:
         - name: {{ include "laa-crime-apply-mock-api.fullname" . }}-db
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
-          image: "cimg/postgres:15.2"
+          image: "postgres:15.2-alpine"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             - name: http

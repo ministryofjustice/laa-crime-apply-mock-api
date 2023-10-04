@@ -89,7 +89,6 @@ jobs:
     #executor: aws-ecr/default
     docker:
       - image: cimg/ruby:3.2.2
-      - image: cimg/postgres:15.2
     working_directory: ~/laa-crime-apply-mock-api
     steps:
       - checkout
