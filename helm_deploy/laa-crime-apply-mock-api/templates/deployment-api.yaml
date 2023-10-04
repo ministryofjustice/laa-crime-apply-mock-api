@@ -61,7 +61,6 @@ spec:
         {{- toYaml . | nindent 8 }}
     {{- end }}
 
-{{- if .Values.localPostgres.enabled -}}
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -116,4 +115,3 @@ spec:
     tolerations:
       {{- toYaml . | nindent 8 }}
     {{- end }}
-  {{- end }}
