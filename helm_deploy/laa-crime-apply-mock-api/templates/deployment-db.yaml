@@ -12,43 +12,43 @@ spec:
       labels:
         app: {{ include "laa-crime-apply-mock-api.fullname" . }}-db
     spec:
-    {{- with .Values.imagePullSecrets }}
-    imagePullSecrets:
-      {{- toYaml . | nindent 8 }}
-    {{- end }}
-    serviceAccountName: {{ include "laa-crime-apply-mock-api.serviceAccountName" . }}
-    securityContext:
-      {{- toYaml .Values.podSecurityContext | nindent 8 }}
-    containers:
-      - name: {{ include "laa-crime-apply-mock-api.fullname" . }}-db
-        securityContext:
-          {{- toYaml .Values.securityContext | nindent 12 }}
-        image: "cimg/postgres:15.2"
-        imagePullPolicy: {{ .Values.image.pullPolicy }}
-        ports:
-          - name: http
-            containerPort: 5432
-            protocol: TCP
-        resources:
-          {{- toYaml .Values.resources | nindent 12 }}
-        env:
-          - name: POSTGRES_PASSWORD
-            value: {{ .Values.db.password }}
-          - name: POSTGRES_USER
-            value: postgres
-          - name: POSTGRES_DB
-            value: {{ .Values.db.dbname }}
-          - name: ALLOW_EMPTY_PASSWORD
-            value: "yes"
-    {{- with .Values.nodeSelector }}
-    nodeSelector:
-      {{- toYaml . | nindent 8 }}
-    {{- end }}
-    {{- with .Values.affinity }}
-    affinity:
-      {{- toYaml . | nindent 8 }}
-    {{- end }}
-    {{- with .Values.tolerations }}
-    tolerations:
-      {{- toYaml . | nindent 8 }}
-    {{- end }}
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      serviceAccountName: {{ include "laa-crime-apply-mock-api.serviceAccountName" . }}
+      securityContext:
+        {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      containers:
+        - name: {{ include "laa-crime-apply-mock-api.fullname" . }}-db
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: "cimg/postgres:15.2"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - name: http
+              containerPort: 5432
+              protocol: TCP
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+          env:
+            - name: POSTGRES_PASSWORD
+              value: {{ .Values.db.password }}
+            - name: POSTGRES_USER
+              value: postgres
+            - name: POSTGRES_DB
+              value: {{ .Values.db.dbname }}
+            - name: ALLOW_EMPTY_PASSWORD
+              value: "yes"
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
