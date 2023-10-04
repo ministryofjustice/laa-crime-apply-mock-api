@@ -22,4 +22,6 @@ env:
     value: {{ .Values.db.username }}
   - name: POSTGRES_DB
     value: {{ .Values.db.dbname }}
+  - name: DATABASE_URL
+    value: {{ .Values.db.dburl }}
 {{- end -}}
