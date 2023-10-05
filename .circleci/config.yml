@@ -120,12 +120,12 @@ jobs:
             echo -n ${CLUSTER_CERT_LIVE} | base64 -d > ./ca.crt
             kubectl config set-cluster ${CLUSTER_NAME_LIVE} --certificate-authority=./ca.crt --server=https://${CLUSTER_NAME_LIVE}
             kubectl config set-credentials circleci --token=${CIRCLE_CI_TOKEN_DEV_LIVE}
-            kubectl config set-context ${CLUSTER_NAME_LIVE} --cluster=${CLUSTER_NAME_LIVE} --user=circleci --namespace=laa-crime-apply-mock-dev
+            kubectl config set-context ${CLUSTER_NAME_LIVE} --cluster=${CLUSTER_NAME_LIVE} --user=circleci --namespace=laa-crime-apply-mock-api-dev
             kubectl config use-context ${CLUSTER_NAME_LIVE}
             kubectl config current-context
-            kubectl --namespace=laa-crime-apply-mock-dev get pods
+            kubectl --namespace=laa-crime-apply-mock-api-dev get pods
       - helm/upgrade-helm-chart:
-          namespace: laa-crime-apply-mock-dev
+          namespace: laa-crime-apply-mock-api-dev
           update-repositories: false
           chart: ./helm_deploy/laa-crime-apply-mock-api
           release-name: laa-crime-apply-mock-api
