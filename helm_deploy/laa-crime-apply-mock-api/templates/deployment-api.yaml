@@ -39,7 +39,7 @@ spec:
               protocol: TCP
           livenessProbe:
             httpGet:
-              path: /status
+              path: /api/message
               port: http
             initialDelaySeconds: 45
             periodSeconds: 10
@@ -47,7 +47,7 @@ spec:
             failureThreshold: 5
           readinessProbe:
             httpGet:
-              path: /status
+              path: /api/message
               port: http
             initialDelaySeconds: 45
             periodSeconds: 10
