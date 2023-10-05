@@ -24,4 +24,6 @@ env:
     value: {{ .Values.db.dbname }}
   - name: DATABASE_URL
     value: {{ .Values.db.dburl }}
+  - name: DEVELOPMENT_HOST
+    value: {{ .Values.service.host }}
 {{- end -}}
