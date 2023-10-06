@@ -30,7 +30,7 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
-gem 'grape', '~> 1.7.0'
+gem 'grape', '~> 1.8.0'
 gem 'grape-entity', '~> 0.10.2'
 gem 'grape_logging'
 gem 'kaminari-activerecord'
