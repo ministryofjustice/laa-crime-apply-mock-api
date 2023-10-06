@@ -31,13 +31,6 @@ RUN apk del build-deps && rm -rf /tmp/*
 # non-root/appuser should own only what they need to
 RUN chown -R appuser:appgroup log tmp db
 
-# Download RDS certificates bundle -- needed for SSL verification
-# We set the path to the bundle in the ENV, and use it in `/config/database.yml`
-#
-# ENV RDS_COMBINED_CA_BUNDLE /usr/src/app/config/rds-combined-ca-bundle.pem
-# ADD https://s3.amazonaws.com/rds-downloads/rds-combined-ca-bundle.pem $RDS_COMBINED_CA_BUNDLE
-# RUN chmod +r $RDS_COMBINED_CA_BUNDLE
-
 ARG APP_BUILD_DATE
 ENV APP_BUILD_DATE ${APP_BUILD_DATE}
 
