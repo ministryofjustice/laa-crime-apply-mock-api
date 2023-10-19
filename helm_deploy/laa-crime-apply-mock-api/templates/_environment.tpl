@@ -26,4 +26,8 @@ env:
     value: {{ .Values.db.dburl }}
   - name: DEVELOPMENT_HOST
     value: {{ .Values.service.host }}
+  - name: API_AUTH_SECRET_MAAT_ADAPTER_DEV
+    value: {{ .Values.service.secret }}
+  - name: API_AUTH_SECRET_MAAT_ADAPTER_UAT
+    value: {{ .Values.service.secret }}
 {{- end -}}
