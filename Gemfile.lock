@@ -133,7 +133,7 @@ GEM
     erubi (1.12.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
-    grape (1.8.0)
+    grape (2.0.0)
       activesupport (>= 5)
       builder
       dry-types (>= 1.1)
@@ -365,7 +365,7 @@ DEPENDENCIES
   brakeman
   debug
   dotenv-rails
-  grape (~> 1.8.0)
+  grape (~> 2.0.0)
   grape-entity (~> 1.0.0)
   grape_logging
   importmap-rails
