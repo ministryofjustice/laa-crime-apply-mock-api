@@ -37,7 +37,7 @@ gem 'grape_logging'
 gem 'kaminari-activerecord'
 
 gem 'laa-criminal-legal-aid-schemas',
-    github: 'ministryofjustice/laa-criminal-legal-aid-schemas', tag: 'v1.0.0'
+    github: 'ministryofjustice/laa-criminal-legal-aid-schemas', tag: 'v1.0.24'
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
