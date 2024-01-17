@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_09_07_142859) do
+ActiveRecord::Schema[7.1].define(version: 2023_12_18_161740) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "citext"
   enable_extension "plpgsql"
@@ -31,8 +31,14 @@ ActiveRecord::Schema[7.1].define(version: 2023_09_07_142859) do
     t.jsonb "return_details"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "work_stream", default: "criminal_applications_team", null: false
+    t.virtual "return_reason", type: :string, as: "(return_details ->> 'reason'::text)", stored: true
+    t.virtual "case_type", type: :string, as: "((submitted_application -> 'case_details'::text) ->> 'case_type'::text)", stored: true
     t.index ["applicant_last_name", "applicant_first_name"], name: "index_crime_applications_on_applicant_name"
+    t.index ["case_type"], name: "index_crime_applications_on_case_type"
+    t.index ["office_code"], name: "index_crime_applications_on_office_code"
     t.index ["reference"], name: "index_crime_applications_on_reference"
+    t.index ["return_reason"], name: "index_crime_applications_on_return_reason"
     t.index ["review_status", "reviewed_at"], name: "index_crime_applications_on_review_status_and_reviewed_at"
     t.index ["review_status", "submitted_at"], name: "index_crime_applications_on_review_status_and_submitted_at"
     t.index ["searchable_text"], name: "index_crime_applications_on_searchable_text", using: :gin
@@ -40,6 +46,7 @@ ActiveRecord::Schema[7.1].define(version: 2023_09_07_142859) do
     t.index ["status", "reviewed_at"], name: "index_crime_applications_on_status_and_reviewed_at", order: { reviewed_at: :desc }
     t.index ["status", "submitted_at"], name: "index_crime_applications_on_status_and_submitted_at", order: { submitted_at: :desc }
     t.index ["status"], name: "index_crime_applications_on_status"
+    t.index ["work_stream"], name: "index_crime_applications_on_work_stream"
   end
 
 end
