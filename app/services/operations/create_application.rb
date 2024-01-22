@@ -13,6 +13,9 @@ module Operations
     def call
       CrimeApplication.transaction do
         @app = CrimeApplication.create!(submitted_application: payload)
+        # Added this review status so that newly added applications can be retrieved
+        @app.review_status = "ready_for_assessment"
+        @app.save
         SupersedeApplication.new(application_id: parent_id).call if parent_id
       end
 
