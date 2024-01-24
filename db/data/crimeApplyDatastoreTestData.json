@@ -35,6 +35,7 @@
       "client_details": {
         "applicant": {
           "nino": "JA293483A",
+          "benefit_type": "universal_credit",
           "last_name": "Walker",
           "first_name": "DO NOT MODIFY Jane",
           "other_names": "Crusher",
@@ -115,6 +116,7 @@
       "client_details": {
         "applicant": {
           "nino": "JA293483A",
+          "benefit_type": "esa",
           "last_name": "Walker",
           "first_name": "DO NOT MODIFY Jacob",
           "other_names": "Beetlejuice",
@@ -208,6 +210,7 @@
       "client_details": {
         "applicant": {
           "nino": "JA293483A",
+          "benefit_type": "guarantee_pension",
           "last_name": "Walker",
           "first_name": "DO NOT MODIFY James",
           "other_names": "Don Corleone",
