@@ -15,6 +15,7 @@ This application is created for LAA Crime Application Adaptor.
 - [**Accessing the database**](#accessing-the-database)
   - [**Via terminal**](#via-terminal)
   - [**Using a database administration tool**](#using-a-database-administration-tool)
+  - [**Updating database migration files and schema.rb**](#Updating-database-migration-files-and-schema.rb)
 - [**Contributing**](#contributing)
 
 ## Contact the team
@@ -121,6 +122,15 @@ If you are using a tool on your machine to connect to the database, you will nee
 - Username: postgres
 
 Password should be left blank.
+
+### Updating database migration files and schema.rb
+When making changes to the database using the migration files, [this](https://guides.rubyonrails.org/active_record_migrations.html#generating-migrations) provides useful guidance. 
+1. You can generate a new migrate files with this command: `bin/rails generate migration <db_update_descriptive_name>`
+2. You can add your updates to this file. It should be possible to make these changes by comparing with the [Crime Apply application](https://github.com/ministryofjustice/laa-criminal-applications-datastore).
+3. Following changes you will want to run `bin/rails db:create` in order to create your database on your machine, this is necessary for the next step. 
+4. Next run `bin/rails db:migrate` which will update your schema.rb with your changes. 
+5. Now you can set up and run the application locally to test the changes have been made. 
+
 
 ## Contributing
 
