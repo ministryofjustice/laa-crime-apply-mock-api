@@ -12,7 +12,12 @@ module Datastore
           private
 
           def case_details
-            super.except('offences', 'codefendants')
+            super.except(
+              'offences',
+              'codefendants',
+              'is_first_court_hearing',
+              'first_court_hearing_name'
+            )
           end
         end
       end

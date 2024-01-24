@@ -1,0 +1,121 @@
+{
+    "application": {
+        "id": "696dd4fd-b619-4637-ab42-a5f4565bcf4a",
+        "parent_id": null,
+        "schema_version": 1.0,
+        "reference": 10000189,
+        "application_type": "initial",
+        "created_at": "2022-10-24T08:33:04.105Z",
+        "submitted_at": "2022-10-24T09:50:04.019Z",
+        "date_stamp": "2022-10-24T09:50:04.019Z",
+        "status": "submitted",
+        "ioj_passport": [],
+        "means_passport": ["on_benefit_check"],
+        "provider_details": {
+            "office_code": "1A123B",
+            "provider_email": "provider@example.com",
+            "legal_rep_first_name": "John",
+            "legal_rep_last_name": "Doe",
+            "legal_rep_telephone": "123456789"
+        },
+        "client_details": {
+            "applicant": {
+            "first_name": "Kit",
+            "last_name": "Pound",
+            "other_names": "",
+            "nino": "AJ123456C",
+            "benefit_type": "universal_credit",
+            "date_of_birth": "2001-06-09",
+            "telephone_number": "07771231231",
+            "correspondence_address_type": "home_address",
+            "home_address": {
+                "lookup_id": null,
+                "address_line_one": "1 Road",
+                "address_line_two": "Village",
+                "city": "Some nice city",
+                "country": "United Kingdom",
+                "postcode": "SW1A 2AA"
+            },
+            "correspondence_address": null
+            }
+        },
+        "case_details": {
+            "urn": "",
+            "case_type": "appeal_to_crown_court",
+            "has_case_concluded": "no",
+            "date_case_concluded": null,
+            "offence_class": null,
+            "appeal_maat_id": null,
+            "appeal_lodged_date": "2021-10-25",
+            "appeal_with_changes_details": null,
+            "offences": [
+            {
+                "name": "Attempt robbery",
+                "offence_class": "C",
+                "slipstreamable": true,
+                "dates": [
+                { "date_from": "2020-05-11", "date_to": "2020-05-12" },
+                { "date_from": "2020-08-11", "date_to": null }
+                ]
+            },
+            {
+                "name": "Non-listed offence, manually entered",
+                "offence_class": null,
+                "slipstreamable": false,
+                "dates": [
+                { "date_from": "2020-09-15", "date_to": null }
+                ]
+            }
+            ],
+            "codefendants": [
+            {
+                "first_name": "Zoe",
+                "last_name": "Blogs",
+                "conflict_of_interest": "yes"
+            }
+            ],
+            "hearing_court_name": "Cardiff Magistrates' Court",
+            "hearing_date": "2024-11-11",
+            "is_first_court_hearing": "no",
+            "first_court_hearing_name": "Bristol Magistrates Court"
+        },
+        "interests_of_justice": [
+            {
+            "type": "loss_of_liberty",
+            "reason": "More details about loss of liberty."
+            }
+        ],
+        "means_details": {
+            "employment_status": "none",
+            "income_details": {
+            "employment_type": ["not_working"],
+            "ended_employment_within_three_months": "yes",
+            "lost_job_in_custody": "yes",
+            "date_job_lost": "2023-09-01",
+            "income_above_threshold": "no",
+            "has_frozen_income_or_assets": "no",
+            "client_owns_property": "no",
+            "has_savings": "no",
+            "manage_without_income": "other",
+            "manage_other_details": "Another way they manage"
+            },
+            "outgoings_details": {
+            "housing_payment_type": "rent",
+            "income_tax_rate_above_threshold": "no",
+            "outgoings_more_than_income": "yes",
+            "how_manage": "A description of how they manage"
+            }
+        },
+        "supporting_evidence": [
+            {
+            "s3_object_key": "123/abcdef1234",
+            "filename": "test.pdf",
+            "content_type": "application/pdf",
+            "file_size": 12,
+            "scan_at": "2023-10-01 12:34:56"
+            }
+        ],
+        "notes": "Some kind of note from the provider about this application",
+        "work_stream": "criminal_applications_team"
+    }
+}
