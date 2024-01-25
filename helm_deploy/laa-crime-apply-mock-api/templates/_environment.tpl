@@ -16,14 +16,11 @@ env:
     value: {{ .Values.sentry_dsn }}
   - name: SENTRY_CURRENT_ENV
     value: {{ .Values.rails.host_env }}
-  - name: POSTGRES_PASSWORD
-    value: {{ .Values.db.password }}
-  - name: POSTGRES_USER
-    value: {{ .Values.db.username }}
-  - name: POSTGRES_DB
-    value: {{ .Values.db.dbname }}
   - name: DATABASE_URL
-    value: {{ .Values.db.dburl }}
+    valueFrom:
+      secretKeyRef:
+        name: rds-postgresql-instance-output
+        key: url
   - name: DEVELOPMENT_HOST
     value: {{ .Values.service.host }}
   - name: API_AUTH_SECRET_MAAT_ADAPTER_DEV
