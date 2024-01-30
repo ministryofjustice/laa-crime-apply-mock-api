@@ -35,6 +35,7 @@
       "client_details": {
         "applicant": {
           "nino": "JA293483A",
+          "benefit_type": "universal_credit",
           "last_name": "Walker",
           "first_name": "DO NOT MODIFY Jane",
           "other_names": "Crusher",
@@ -115,6 +116,7 @@
       "client_details": {
         "applicant": {
           "nino": "JA293483A",
+          "benefit_type": "esa",
           "last_name": "Walker",
           "first_name": "DO NOT MODIFY Jacob",
           "other_names": "Beetlejuice",
@@ -208,6 +210,7 @@
       "client_details": {
         "applicant": {
           "nino": "JA293483A",
+          "benefit_type": "guarantee_pension",
           "last_name": "Walker",
           "first_name": "DO NOT MODIFY James",
           "other_names": "Don Corleone",
@@ -293,6 +296,7 @@
       "client_details": {
         "applicant": {
           "nino": null,
+          "benefit_type": "income_support",
           "last_name": "Walker",
           "first_name": "DO NOT MODIFY Jordan",
           "other_names": "Snoops",
@@ -378,6 +382,7 @@
       "client_details": {
         "applicant": {
           "nino": null,
+          "benefit_type": "esa",
           "last_name": "Walker",
           "first_name": "DO NOT MODIFY Jonathan",
           "other_names": "Peabody",
@@ -462,6 +467,7 @@
       "client_details": {
         "applicant": {
           "nino": "JA293483A",
+          "benefit_type": "universal_credit",
           "last_name": "Walker",
           "first_name": "DO NOT MODIFY Jimmy",
           "other_names": "Scarface",
@@ -544,6 +550,7 @@
       "client_details": {
         "applicant": {
           "nino": "JA293483A",
+          "benefit_type": "universal_credit",
           "last_name": "Walker",
           "first_name": "DO NOT MODIFY John",
           "other_names": "Edelweiss",
@@ -631,6 +638,7 @@
       "client_details": {
         "applicant": {
           "nino": "JA293483A",
+          "benefit_type": "universal_credit",
           "last_name": "Walker",
           "first_name": "DO NOT MODIFY Janet",
           "other_names": "Summer Breeze",
@@ -804,6 +812,7 @@
       "client_details": {
         "applicant": {
           "nino": null,
+          "benefit_type": "universal_credit",
           "last_name": "Walker",
           "first_name": "DO NOT MODIFY Jennifer",
           "other_names": "Ada Lovelace",

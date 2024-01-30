@@ -1,9 +1,10 @@
 GIT
   remote: https://github.com/ministryofjustice/laa-criminal-legal-aid-schemas.git
-  revision: 1c7d156ea6ddf0fb997706e3d59d66f4f102e0e7
-  tag: v1.0.0
+  revision: 482998054ce7e96a6a286f561f152a5c3c3e04c2
+  tag: v1.0.31
   specs:
-    laa-criminal-legal-aid-schemas (1.0.0)
+    laa-criminal-legal-aid-schemas (1.0.31)
+      dry-schema (~> 1.13)
       dry-struct (~> 1.6.0)
       json-schema (~> 4.0.0)
 
@@ -91,7 +92,8 @@ GEM
     bigdecimal (3.1.5)
     bootsnap (1.17.0)
       msgpack (~> 1.2)
-    brakeman (6.1.0)
+    brakeman (6.1.1)
+      racc
     builder (3.2.4)
     coderay (1.1.3)
     concurrent-ruby (1.2.2)
@@ -100,9 +102,9 @@ GEM
       rexml
     crass (1.0.6)
     date (3.3.4)
-    debug (1.8.0)
-      irb (>= 1.5.0)
-      reline (>= 0.3.1)
+    debug (1.9.1)
+      irb (~> 1.10)
+      reline (>= 0.3.8)
     diff-lcs (1.5.0)
     docile (1.4.0)
     dotenv (2.8.1)
@@ -111,13 +113,25 @@ GEM
       railties (>= 3.2)
     drb (2.2.0)
       ruby2_keywords
+    dry-configurable (1.1.0)
+      dry-core (~> 1.0, < 2)
+      zeitwerk (~> 2.6)
     dry-core (1.0.1)
       concurrent-ruby (~> 1.0)
       zeitwerk (~> 2.6)
     dry-inflector (1.0.0)
+    dry-initializer (3.1.1)
     dry-logic (1.5.0)
       concurrent-ruby (~> 1.0)
       dry-core (~> 1.0, < 2)
+      zeitwerk (~> 2.6)
+    dry-schema (1.13.3)
+      concurrent-ruby (~> 1.0)
+      dry-configurable (~> 1.0, >= 1.0.1)
+      dry-core (~> 1.0, < 2)
+      dry-initializer (~> 3.0)
+      dry-logic (>= 1.4, < 2)
+      dry-types (>= 1.7, < 2)
       zeitwerk (~> 2.6)
     dry-struct (1.6.0)
       dry-core (~> 1.0, < 2)
@@ -154,8 +168,8 @@ GEM
       actionpack (>= 6.0.0)
       activesupport (>= 6.0.0)
       railties (>= 6.0.0)
-    io-console (0.6.0)
-    irb (1.9.1)
+    io-console (0.7.1)
+    irb (1.11.0)
       rdoc
       reline (>= 0.3.8)
     jbuilder (2.11.5)
@@ -216,7 +230,7 @@ GEM
     pry (0.14.2)
       coderay (~> 1.1)
       method_source (~> 1.0)
-    psych (5.1.1.1)
+    psych (5.1.2)
       stringio
     public_suffix (5.0.3)
     puma (6.4.0)
@@ -263,10 +277,10 @@ GEM
       zeitwerk (~> 2.6)
     rainbow (3.1.1)
     rake (13.1.0)
-    rdoc (6.6.0)
+    rdoc (6.6.2)
       psych (>= 4.0.0)
     regexp_parser (2.8.3)
-    reline (0.4.0)
+    reline (0.4.1)
       io-console (~> 0.5)
     rexml (3.2.6)
     rspec-core (3.12.2)
@@ -336,7 +350,7 @@ GEM
       sprockets (>= 3.0.0)
     stimulus-rails (1.3.0)
       railties (>= 6.0.0)
-    stringio (3.0.9)
+    stringio (3.1.0)
     thor (1.3.0)
     timeout (0.4.1)
     turbo-rails (1.5.0)
