@@ -390,7 +390,7 @@ DEPENDENCIES
   moj-simple-jwt-auth (= 0.1.0)
   pg (~> 1.4)
   pry
-  puma (~> 6.4)
+  puma (~> 6.4, >= 6.4.2)
   rails (~> 7.1.2)
   rspec-rails
   rspec_junit_formatter
@@ -410,4 +410,4 @@ RUBY VERSION
    ruby 3.2.2p53
 
 BUNDLED WITH
-   2.4.18
+   2.4.6
