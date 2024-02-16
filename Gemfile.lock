@@ -227,7 +227,7 @@ GEM
     parser (3.3.0.5)
       ast (~> 2.4.1)
       racc
-    pg (1.5.4)
+    pg (1.5.5)
     pry (0.14.2)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -389,7 +389,7 @@ DEPENDENCIES
   kaminari-activerecord
   laa-criminal-legal-aid-schemas!
   moj-simple-jwt-auth (= 0.1.0)
-  pg (~> 1.4)
+  pg (~> 1.5)
   pry
   puma (~> 6.4, >= 6.4.2)
   rails (~> 7.1.3)
