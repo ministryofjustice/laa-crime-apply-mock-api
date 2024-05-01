@@ -25,6 +25,6 @@ env:
     value: {{ .Values.service.host }}
   - name: API_AUTH_SECRET_MAAT_ADAPTER_DEV
     value: {{ .Values.service.secret }}
-  - name: API_AUTH_SECRET_MAAT_ADAPTER_UAT
+  - name: API_AUTH_SECRET_MAAT_ADAPTER_TEST
     value: {{ .Values.service.secret }}
 {{- end -}}

@@ -26,7 +26,7 @@ services:
       DISABLE_HTTPS: "1"
       RAILS_SERVE_STATIC_FILES: "1"
       API_AUTH_SECRET_MAAT_ADAPTER_DEV: somesecretkeysomesecretkeysomesecretkeysomesecretkeysomesecretkeysomesecretkeysomesecretkeysomesecretkey
-      API_AUTH_SECRET_MAAT_ADAPTER_UAT: somesecretkeysomesecretkeysomesecretkeysomesecretkeysomesecretkeysomesecretkeysomesecretkeysomesecretkey
+      API_AUTH_SECRET_MAAT_ADAPTER_TEST: somesecretkeysomesecretkeysomesecretkeysomesecretkeysomesecretkeysomesecretkeysomesecretkeysomesecretkey
     ports:
       - "3003:3003" # puma server (rails app)
     depends_on:
