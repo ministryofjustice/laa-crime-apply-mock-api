@@ -85,7 +85,7 @@ group :test do
   gem "shoulda-matchers"
   gem 'rubocop', require: false
   gem 'rubocop-performance', require: false
-  gem 'rubocop-rails', require: false
+  gem 'rubocop-rails', '>= 2.25.0', require: false
   gem 'rubocop-rspec', require: false
   gem 'simplecov', require: false
   gem 'webmock'
