@@ -94,9 +94,9 @@ GEM
       msgpack (~> 1.2)
     brakeman (6.1.2)
       racc
-    builder (3.2.4)
+    builder (3.3.0)
     coderay (1.1.3)
-    concurrent-ruby (1.3.1)
+    concurrent-ruby (1.3.3)
     connection_pool (2.4.1)
     crack (1.0.0)
       bigdecimal
@@ -119,7 +119,7 @@ GEM
     dry-core (1.0.1)
       concurrent-ruby (~> 1.0)
       zeitwerk (~> 2.6)
-    dry-inflector (1.0.0)
+    dry-inflector (1.1.0)
     dry-initializer (3.1.1)
     dry-logic (1.5.0)
       concurrent-ruby (~> 1.0)
@@ -148,13 +148,12 @@ GEM
     erubi (1.12.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
-    grape (2.0.0)
-      activesupport (>= 5)
-      builder
+    grape (2.1.2)
+      activesupport (>= 6)
       dry-types (>= 1.1)
-      mustermann-grape (~> 1.0.0)
-      rack (>= 1.3.0)
-      rack-accept
+      mustermann-grape (~> 1.1.0)
+      rack (>= 2)
+      zeitwerk
     grape-entity (1.0.1)
       activesupport (>= 3.0.0)
       multi_json (>= 1.3.2)
@@ -196,7 +195,7 @@ GEM
     marcel (1.0.4)
     method_source (1.0.0)
     mini_mime (1.1.5)
-    minitest (5.23.1)
+    minitest (5.24.1)
     moj-simple-jwt-auth (0.1.0)
       json
       jwt
@@ -204,7 +203,7 @@ GEM
     multi_json (1.15.0)
     mustermann (3.0.0)
       ruby2_keywords (~> 0.0.1)
-    mustermann-grape (1.0.2)
+    mustermann-grape (1.1.0)
       mustermann (>= 1.0.0)
     mutex_m (0.2.0)
     net-imap (0.4.12)
@@ -237,9 +236,7 @@ GEM
     puma (6.4.2)
       nio4r (~> 2.0)
     racc (1.8.0)
-    rack (3.0.11)
-    rack-accept (0.4.5)
-      rack (>= 0.4)
+    rack (3.1.6)
     rack-session (2.0.0)
       rack (>= 3.0.0)
     rack-test (2.1.0)
@@ -374,7 +371,7 @@ GEM
     websocket-driver (0.7.6)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
-    zeitwerk (2.6.15)
+    zeitwerk (2.6.16)
 
 PLATFORMS
   aarch64-linux-musl
@@ -386,7 +383,7 @@ DEPENDENCIES
   brakeman
   debug
   dotenv-rails
-  grape (~> 2.0.0)
+  grape (~> 2.1.2)
   grape-entity (~> 1.0.1)
   grape_logging
   importmap-rails
