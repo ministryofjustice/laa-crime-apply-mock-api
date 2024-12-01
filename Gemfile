@@ -10,7 +10,7 @@ gem "rails", "~> 7.1.3"
 gem 'moj-simple-jwt-auth', '0.1.0'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
-gem "sprockets-rails"
+gem "sprockets-rails", ">= 3.5.0"
 
 # Use PostgreSQL as the database
 gem "pg", "~> 1.5"
