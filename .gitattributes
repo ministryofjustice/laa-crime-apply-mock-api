@@ -1,6 +1,8 @@
 # See https://git-scm.com/docs/gitattributes for more about git attribute files.
 
 docker-compose.override.yml filter=git-crypt diff=git-crypt
+docker-compose.yml filter=git-crypt diff=git-crypt
+.env.development filter=git-crypt diff=git-crypt
 helm_deploy/**/values-*.yaml filter=git-crypt diff=git-crypt
 
 # Mark the database schema as having been generated.
