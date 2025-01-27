@@ -36,16 +36,31 @@ Install dependencies with bundler:
 ```
 bundle install
 ```
-## Set up (Docker)
 
-You should run the application using Docker. To do so, run the following commands from inside the project directory:
+### Obtaining environment variables for running locally
 
+To run the app locally, you will need to download the appropriate environment variables from the team vault in 1Password. These environment variables are stored as a .env file, which docker-compose uses when starting up the service. If you don't see the team vault, speak to your tech lead to get access.
+
+To begin with, make sure that you have the 1Password CLI installed:
+
+```sh
+op --version
 ```
-docker-compose build
+
+If the command is not found, [follow the steps on the 1Password developer docs to get the CLI set-up](https://developer.1password.com/docs/cli/get-started/).
+
+Once you're ready to run the application:
+
+```sh
+./start-local.sh
 ```
-```
-docker-compose up
-```
+
+### Decrypting values files
+
+The values YAML files are encrypted using [git-crypt](https://github.com/AGWA/git-crypt).
+
+To be able to view and/or edit these files, you will need to decrypt them first.
+
 
 The database will be set up as part of the build command above. It will be seeded with some sample records to work with. The application will run at http://localhost:3003/.
 
