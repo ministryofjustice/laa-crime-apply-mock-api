@@ -55,12 +55,6 @@ Once you're ready to run the application:
 ./start-local.sh
 ```
 
-### Decrypting values files
-
-The values YAML files are encrypted using [git-crypt](https://github.com/AGWA/git-crypt).
-
-To be able to view and/or edit these files, you will need to decrypt them first.
-
 
 The database will be set up as part of the build command above. It will be seeded with some sample records to work with. The application will run at http://localhost:3003/.
 
