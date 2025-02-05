@@ -11,8 +11,8 @@ env:
   - name: SECRET_KEY_BASE
     valueFrom:
       secretKeyRef:
-        name: api-auth-secret-maat-adapter
-        key: API_AUTH_SECRET_MAAT_ADAPTER
+        name: secret-key-base
+        key: SECRET_KEY_BASE
   - name: AWS_REGION
     value: {{ .Values.aws_region }}
   - name: SENTRY_DSN
@@ -29,11 +29,11 @@ env:
   - name: API_AUTH_SECRET_MAAT_ADAPTER_DEV
     valueFrom:
       secretKeyRef:
-        name: secret-key-base
-        key: SECRET_KEY_BASE
+        name: api-auth-secret-maat-adapter
+        key: API_AUTH_SECRET_MAAT_ADAPTER
   - name: API_AUTH_SECRET_MAAT_ADAPTER_TEST
     valueFrom:
       secretKeyRef:
-        name: secret-key-base
-        key: SECRET_KEY_BASE
+        name: api-auth-secret-maat-adapter
+        key: API_AUTH_SECRET_MAAT_ADAPTER
 {{- end -}}
