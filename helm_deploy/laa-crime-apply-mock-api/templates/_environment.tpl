@@ -9,7 +9,10 @@ env:
   - name: HOST_ENV
     value: {{ .Values.rails.host_env }}
   - name: SECRET_KEY_BASE
-    value: {{ .Values.rails.secret_key_base }}
+    valueFrom:
+      secretKeyRef:
+        name: secret-key-base
+        key: SECRET_KEY_BASE
   - name: AWS_REGION
     value: {{ .Values.aws_region }}
   - name: SENTRY_DSN
@@ -24,7 +27,13 @@ env:
   - name: DEVELOPMENT_HOST
     value: {{ .Values.service.host }}
   - name: API_AUTH_SECRET_MAAT_ADAPTER_DEV
-    value: {{ .Values.service.secret }}
+    valueFrom:
+      secretKeyRef:
+        name: api-auth-secret-maat-adapter
+        key: API_AUTH_SECRET_MAAT_ADAPTER
   - name: API_AUTH_SECRET_MAAT_ADAPTER_TEST
-    value: {{ .Values.service.secret }}
+    valueFrom:
+      secretKeyRef:
+        name: api-auth-secret-maat-adapter
+        key: API_AUTH_SECRET_MAAT_ADAPTER
 {{- end -}}
