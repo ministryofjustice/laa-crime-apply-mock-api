@@ -25,9 +25,6 @@ RUN gem install bundler && \
 
 COPY . .
 
-# Copy the .env file
-COPY .env.development .env.development
-
 # tidy up installation
 RUN apk del build-deps && rm -rf /tmp/*
 
