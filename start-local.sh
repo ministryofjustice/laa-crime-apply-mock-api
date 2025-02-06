@@ -6,7 +6,7 @@ set -euo pipefail
 # Specify the vault and the document name in 1Password
 VAULT="LAA Crime Apps"
 DOCUMENT="EnvironmentVariables-CrimeApplyMockAPI-App"
-APP_ENV_FILE="./app.env"
+APP_ENV_FILE="./.env.development"
 
 function remove_env_file()
 {
