@@ -402,7 +402,7 @@ DEPENDENCIES
   rspec_junit_formatter
   rubocop
   rubocop-performance
-  rubocop-rails
+  rubocop-rails (>= 2.25.0)
   rubocop-rspec
   shoulda-matchers
   simplecov
