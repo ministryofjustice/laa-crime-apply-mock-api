@@ -84,10 +84,10 @@ group :test do
   gem 'brakeman'
   gem "rspec_junit_formatter"
   gem "shoulda-matchers"
-  gem 'rubocop', require: false
-  gem 'rubocop-performance', require: false
-  gem 'rubocop-rails', require: false
-  gem 'rubocop-rspec', require: false
+  gem 'rubocop', '>= 1.65.0', require: false
+  gem 'rubocop-performance', '>= 1.21.1', require: false
+  gem 'rubocop-rails', '>= 2.25.1', require: false
+  gem 'rubocop-rspec', '>= 2.30.0', require: false
   gem 'simplecov', require: false
   gem 'webmock'
 end
