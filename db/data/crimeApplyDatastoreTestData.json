@@ -44,6 +44,18 @@
           "telephone_number": "",
           "correspondence_address": null,
           "correspondence_address_type": "providers_office_address"
+        },
+        "partner": {
+          "nino": "JX546489C",
+          "benefit_type": "income_support",
+          "last_name": "Smith",
+          "first_name": "DO NOT MODIFY David",
+          "other_names": "Angela",
+          "date_of_birth": "1978-02-15",
+          "last_jsa_appointment_date": null,
+          "involvement_in_case": null,
+          "conflict_of_interest": null,
+          "dwp_response": null
         }
       },
       "means_passport": [
