@@ -1,4 +1,4 @@
-FROM ruby:3.2.2-alpine3.18
+FROM ruby:4.0.3-alpine3.23
 MAINTAINER LAA Crime Apps - Core
 
 RUN apk --no-cache add --virtual build-deps build-base postgresql15-dev git bash curl \

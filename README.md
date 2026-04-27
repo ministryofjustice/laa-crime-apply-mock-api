@@ -26,7 +26,7 @@ Court Data Adaptor is maintained by staff in the Legal Aid Agency. If you need s
 ## Dependencies
 
 * Ruby version
-    * Ruby version 3.2.2
+    * Ruby version 4.0.3
       To install various ruby versions, install a Ruby Version Manager.
       Two popular are [RVM](https://rvm.io/) and [asdf](https://asdf-vm.com/).
 
