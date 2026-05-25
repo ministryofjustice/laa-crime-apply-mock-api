@@ -864,7 +864,7 @@
     "submitted_application": {
       "id": "89c53e5b-a058-40aa-a077-8e9c1808f80c",
       "parent_id": null,
-      "reference": 10000333,
+      "reference": 10000339,
       "created_at": "2023-07-17T08:21:27.848Z",
       "date_stamp": "2023-07-17T08:22:35.997Z",
       "case_details": {
@@ -943,10 +943,10 @@
     "status": "submitted",
     "submitted_at": "2023-07-17T08:23:15.334Z",
     "returned_at": null,
-    "searchable_text": "'10000333':6 'Angela':4 'modifi':3 'roland':5",
+    "searchable_text": "'10000339':6 'Angela':4 'modifi':3 'roland':5",
     "reviewed_at": null,
     "review_status": "ready_for_assessment",
-    "reference": 10000333,
+    "reference": 10000339,
     "applicant_first_name": "DO NOT MODIFY Angela",
     "applicant_last_name": "Roland",
     "offence_class": "H",
